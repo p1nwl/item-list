@@ -1,0 +1,41 @@
+[
+  {
+    "id": "fusion",
+    "name": "Слияние",
+    "components": [
+      "soul_of_galahan",
+      "soul_of_more",
+      "soul_of_crusher",
+      "ruined_soul"
+    ],
+    "icon": "/icons/fusion.png"
+  },
+  {
+    "id": "soul_of_galahan",
+    "name": "Душа Галахана",
+    "icon": "/icons/soul_of_galahan.png",
+    "craftsInto": ["fusion"],
+    "droppedBy": ["Галахан"]
+  },
+  {
+    "id": "soul_of_more",
+    "name": "Душа Мора",
+    "icon": "/icons/soul_of_more.png",
+    "craftsInto": ["fusion"],
+    "droppedBy": ["Мор"]
+  },
+  {
+    "id": "soul_of_crusher",
+    "name": "Душа Крушителя",
+    "icon": "/icons/soul_of_crusher.png",
+    "craftsInto": ["fusion"],
+    "droppedBy": ["Крушитель"]
+  },
+  {
+    "id": "ruined_soul",
+    "name": "Загубленная душа",
+    "icon": "/icons/ruined_soul.png",
+    "craftsInto": ["fusion"],
+    "droppedBy": ["Результат Снадобья"]
+  }
+]

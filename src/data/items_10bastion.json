@@ -1,0 +1,74 @@
+[
+  {
+    "id": "bloody_robot",
+    "name": "Кровавый робот",
+    "droppedBy": ["Кровосос Raid Hard"],
+    "craftsInto": ["paragon_scroll_10", "introduction_to_absolute"],
+    "icon": "/icons/bloody_robot.png"
+  },
+  {
+    "id": "shadow_vampire",
+    "name": "Теневой вампир",
+    "droppedBy": ["Кровосос Raid Hard"],
+    "craftsInto": ["paragon_scroll_10", "introduction_to_absolute"],
+    "icon": "/icons/shadow_vampire.png"
+  },
+  {
+    "id": "bloody_fury",
+    "name": "Кровавая ярость",
+    "droppedBy": ["Кровосос Raid Hard"],
+    "craftsInto": ["paragon_scroll_10", "introduction_to_absolute"],
+    "icon": "/icons/bloody_fury.png"
+  },
+  {
+    "id": "bloody_impudence",
+    "name": "Кровавая дерзость",
+    "droppedBy": ["Кровосос Raid Hard"],
+    "craftsInto": ["paragon_scroll_10", "introduction_to_absolute"],
+    "icon": "/icons/bloody_impudence.png"
+  },
+  {
+    "id": "paragon_scroll_10_recipe",
+    "name": "Свиток улучшения парагона 10 (рецепт)",
+    "boughtFrom": "Повелитель ужаса (Кровавый Бастион)",
+    "craftsInto": ["paragon_scroll_10"],
+    "icon": "/icons/magic_recipe.png"
+  },
+  {
+    "id": "paragon_scroll_10",
+    "name": "Свиток улучшения парагона(10)",
+    "description": "Улучшает парагон до 10 уровня.",
+    "components": [
+      "bloody_robot",
+      "shadow_vampire",
+      "bloody_fury",
+      "bloody_impudence",
+      "paragon_scroll_10_recipe"
+    ],
+    "icon": "/icons/paragon.png"
+  },
+  {
+    "id": "introduction_to_absolute_recipe",
+    "name": "Введение в абсолют (рецепт)",
+    "boughtFrom": "Рыцарь смерти (Кровавый Бастион)",
+    "craftsInto": ["introduction_to_absolute"],
+    "icon": "/icons/introduction_to_absolute_recipe.png"
+  },
+  {
+    "id": "introduction_to_absolute",
+    "name": "Введение в абсолют",
+    "components": [
+      "bloody_robot",
+      "shadow_vampire",
+      "bloody_fury",
+      "bloody_impudence",
+      "introduction_to_absolute_recipe"
+    ],
+    "craftsInto": [
+      "enhancement_sketch_7",
+      "trophy_upgrade_26",
+      "pendant_upgrade_5"
+    ],
+    "icon": "/icons/introduction_to_absolute.png"
+  }
+]

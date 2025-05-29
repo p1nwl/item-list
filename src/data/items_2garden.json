@@ -1,0 +1,62 @@
+[
+  {
+    "id": "new_year_hat",
+    "name": "Новогодняя шапка",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "parasite",
+    "name": "Паразит",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "ominous_shield",
+    "name": "Зловещий щит",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "corruption",
+    "name": "Порча",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "vampire_fang",
+    "name": "Клык вампира",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "fire_orb",
+    "name": "Сфера огня",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "wild_worm",
+    "name": "Дикий червь",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "talisman_of_protection",
+    "name": "Талисман защиты",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "talisman_of_health",
+    "name": "Талисман здоровья",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "crystal_ball",
+    "name": "Хрустальный шар",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "rune_axe",
+    "name": "Рунный топор",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "opal",
+    "name": "Опал",
+    "icon": "/icons/dummy.png"
+  }
+]
