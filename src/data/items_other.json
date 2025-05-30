@@ -3,5 +3,45 @@
     "id": "ice_shard",
     "name": "Осколок льда",
     "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "dark_claw_of_prime",
+    "name": "Темный Коготь Прайма",
+    "icon": "/icons/dark_fang.png"
+  },
+  {
+    "id": "bloodstained_claw",
+    "name": "Окровавленный Коготь",
+    "icon": "/icons/bloody_fang.png"
+  },
+  {
+    "id": "essence_of_stone",
+    "name": "Эссенция Камня",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "essence_of_earth",
+    "name": "Эссенция земли",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "essence_of_the_sea",
+    "name": "Эссенция моря",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "essence_of_darkness",
+    "name": "Эссенция тьмы",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "cube_opal",
+    "name": "Кубик(опал)",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "bloody_diadem_emerald",
+    "name": "Кровавая диадема(изумруд)",
+    "icon": "/icons/dummy.png"
   }
 ]

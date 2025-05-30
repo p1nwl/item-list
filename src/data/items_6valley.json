@@ -1,1 +1,7 @@
-[]
+[
+  {
+    "id": "knight_move",
+    "name": "Ход конём",
+    "icon": "/icons/dummy.png"
+  }
+]

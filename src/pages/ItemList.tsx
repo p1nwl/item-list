@@ -14,14 +14,25 @@ const ItemList = () => {
   const items: Item[] = getAllItems();
 
   const filtered = items
-    .filter((item) => item.name.toLowerCase().includes(search.toLowerCase()))
     .filter((item) =>
-      dropFilter ? item.droppedBy?.includes(dropFilter) : true
+      search ? item.name.toLowerCase().includes(search.toLowerCase()) : false
     )
     .filter((item) =>
-      componentFilter ? item.components?.includes(componentFilter) : true
+      dropFilter ? item.droppedBy?.includes(dropFilter) ?? false : true
     )
-    .sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
+    .filter((item) =>
+      componentFilter
+        ? item.components?.includes(componentFilter) ?? false
+        : true
+    )
+    .sort((a, b) => {
+      const aKey = a[sortBy];
+      const bKey = b[sortBy];
+      return aKey.localeCompare(bKey, undefined, {
+        numeric: true,
+        sensitivity: "base",
+      });
+    });
 
   return (
     <div className="p-4 max-w-5xl mx-auto">
@@ -38,27 +49,29 @@ const ItemList = () => {
         setComponentFilter={setComponentFilter}
       />
 
-      <div className="grid gap-4">
-        {filtered.map((item) => (
-          <div
-            key={item.id}
-            className="p-4 border rounded shadow flex items-center gap-4 cursor-pointer hover:bg-gray-100 transition"
-            onClick={() => navigate(`/item/${item.id}`)}
-          >
-            <img
-              src={item.icon || "/icons/placeholder.png"}
-              alt={item.name}
-              className="w-12 h-12 object-contain"
-            />
-            <div>
-              <h2 className="font-semibold text-lg">{item.name}</h2>
-              {item.description && (
-                <p className="text-sm text-gray-600">{item.description}</p>
-              )}
+      {search && (
+        <div className="grid gap-4">
+          {filtered.map((item) => (
+            <div
+              key={item.id}
+              className="p-4 border rounded shadow flex items-center gap-4 cursor-pointer hover:bg-gray-100 transition"
+              onClick={() => navigate(`/item/${item.id}`)}
+            >
+              <img
+                src={item.icon || "/icons/placeholder.png"}
+                alt={item.name}
+                className="w-12 h-12 object-contain"
+              />
+              <div>
+                <h2 className="font-semibold text-lg">{item.name}</h2>
+                {item.description && (
+                  <p className="text-sm text-gray-600">{item.description}</p>
+                )}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

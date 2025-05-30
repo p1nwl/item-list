@@ -58,5 +58,25 @@
     "id": "opal",
     "name": "Опал",
     "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "soul_of_spider_in_blood",
+    "name": "Душа Матери Пауков в крови",
+    "icon": "/icons/soulf_of_spider_in_blood.png"
+  },
+  {
+    "id": "phoenix",
+    "name": "Феникс",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "only_in_dreams",
+    "name": "Только во снах",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "soul_ache",
+    "name": "Душевная боль",
+    "icon": "/icons/dummy.png"
   }
 ]

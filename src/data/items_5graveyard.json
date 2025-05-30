@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "id": "soul_of_uzuran_in_blood",
+    "name": "Душа Узурана в крови",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "rosehip",
+    "name": "Шиповник",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "knight_chestplate",
+    "name": "Рыцарский нагрудник",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "flesh_ripper",
+    "name": "Режущий плоть",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "emerald_duplicate",
+    "name": "Эмеральд",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "essence_of_dark_rider",
+    "name": "Эссенция Темного Всадника",
+    "icon": "/icons/dummy.png"
+  }
+]

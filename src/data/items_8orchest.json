@@ -6,7 +6,8 @@
       "soul_of_galahan",
       "soul_of_more",
       "soul_of_crusher",
-      "ruined_soul"
+      "ruined_soul",
+      "axe_of_bones"
     ],
     "icon": "/icons/fusion.png"
   },
@@ -37,5 +38,117 @@
     "icon": "/icons/ruined_soul.png",
     "craftsInto": ["fusion"],
     "droppedBy": ["Результат Снадобья"]
+  },
+  {
+    "id": "axe_of_bones",
+    "name": "Топор из остатков костей",
+    "icon": "/icons/axe_of_bones.png",
+    "craftsInto": ["fusion"],
+    "droppedBy": ["Костяшка"]
+  },
+  {
+    "id": "courier_marquis",
+    "name": "курьер Маркиз",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "soul_of_marquis_in_blood",
+    "name": "Душа Маркиза в крови",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "cursed_unity",
+    "name": "Проклятое Единство",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "dark_unity",
+    "name": "Темное единство",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "poisonous_rune_of_strength",
+    "name": "Ядовитая руна Силы",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "poisonous_rune_of_agility",
+    "name": "Ядовитая руна Ловкости",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "poisonous_rune_of_wisdom",
+    "name": "Ядовитая руна Разума",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "cursed_amulet_es",
+    "name": "Проклятый оберег(Э.С)",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "magical_amulet_es",
+    "name": "Магический оберег(Э.С)",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "armor_of_frost",
+    "name": "Броня Мрази",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "rotten_carcass",
+    "name": "Гнилая туша",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "brightness_3",
+    "name": "Яркость(3)",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "flight_of_thought_3",
+    "name": "Полет мысли(3)",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "burst_of_rage_3",
+    "name": "Вспышка ярости(3)",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "cursed_whirlwind",
+    "name": "Проклятый вихрь",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "amulet_of_vengeance",
+    "name": "Оберег возмездия",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "broken_scythe",
+    "name": "Сломанная коса",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "golden",
+    "name": "Золотой",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "staff_of_darkness",
+    "name": "Посох тёмных",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "shards",
+    "name": "Черепки",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "kyanite",
+    "name": "Кианит",
+    "icon": "/icons/dummy.png"
   }
 ]

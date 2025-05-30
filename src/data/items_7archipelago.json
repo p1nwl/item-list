@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "id": "courier_kai",
+    "name": "курьер Кай",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "soul_of_kai_in_blood",
+    "name": "Душа Кая в крови",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "essence_of_crustacean",
+    "name": "Эссенция ракообразного",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "death_blocker",
+    "name": "Блокирующий смерть",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "kaya_armor",
+    "name": "Броня Кая",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "naga_headwear",
+    "name": "Головной убор Наг",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "medusa_necklace",
+    "name": "Ожерелье медузы",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "essence_of_abyss",
+    "name": "Эссенция пучины",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "accuracy_above_all",
+    "name": "Меткость превыше всего",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "spear_of_moonlight",
+    "name": "Копье лунного света",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "elves_cloak",
+    "name": "Накидка эльфов",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "skull_of_the_dead",
+    "name": "Череп покойника",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "staff_of_the_dead",
+    "name": "Посох смертника",
+    "icon": "/icons/dummy.png"
+  }
+]

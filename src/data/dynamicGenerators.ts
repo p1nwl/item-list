@@ -1,4 +1,7 @@
-import { levelCoreRecipes } from "../components/CustomRecipeComponents";
+import {
+  paragonScrollRecipes,
+  trophyUpgradeRecipes,
+} from "../components/CustomRecipeComponents";
 
 export interface Item {
   id: string;
@@ -17,6 +20,7 @@ interface GeneratorConfig {
   baseDescription?: string;
   icon: string;
   count: number;
+  recipeIcon: string;
   getComponents?: (level: number) => string[];
 }
 
@@ -24,14 +28,28 @@ export function generateItems(config: GeneratorConfig): Item[] {
   const items: Item[] = [];
 
   for (let i = 1; i <= config.count; i++) {
+    const id = `${config.baseId}_${i}`;
+    const name = `${config.baseName} ${i}`;
+    const description = config.baseDescription
+      ? `${config.baseDescription} ${i + 1}`
+      : undefined;
+    const components = config.getComponents ? config.getComponents(i) : [];
+
     items.push({
-      id: `${config.baseId}_${i}`,
-      name: `${config.baseName} ${i}`,
-      description: config.baseDescription
-        ? `${config.baseDescription} ${i + 1}`
-        : undefined,
+      id,
+      name,
+      description,
       icon: config.icon,
-      components: config.getComponents ? config.getComponents(i) : [],
+      components,
+    });
+
+    // Генерация рецепта для каждого предмета
+    items.push({
+      id: `${id}_recipe`,
+      name: `${name} (рецепт)`,
+      icon: config.recipeIcon || "/icons/recipe.png",
+      description: `Рецепт для ${name}`,
+      craftsInto: [id],
     });
   }
 
@@ -44,14 +62,17 @@ export const dynamicItems: Item[] = [
     baseName: "Улучшение трофея",
     baseDescription: "Улучшение трофея до уровня",
     icon: "/icons/trophy.png",
-    count: 29,
-    getComponents: (level) => levelCoreRecipes[level - 1] || [],
+    recipeIcon: "/icons/shaman_recipe.png",
+    count: trophyUpgradeRecipes.length,
+    getComponents: (level) => trophyUpgradeRecipes[level - 1] || [],
   }),
-  //   ...generateItems({
-  //     baseId: "sketch_boost",
-  //     baseName: "Эскиз усиления",
-  //     icon: "/icons/sketch.png",
-  //     count: 10,
-  //     getComponents: (level) => [`component-${level}`, "ink"]
-  //   })
+  ...generateItems({
+    baseId: "paragon_scroll",
+    baseName: "Свиток улучшения парагонов",
+    baseDescription: "Улучшает парагон до уровня",
+    icon: "/icons/paragon.png",
+    recipeIcon: "/icons/magic_recipe.png",
+    count: paragonScrollRecipes.length,
+    getComponents: (level) => paragonScrollRecipes[level - 1] || [],
+  }),
 ];

@@ -1,1 +1,57 @@
-[]
+[
+  {
+    "id": "soul_of_xeron_in_blood",
+    "name": "Душа Ксерона в крови",
+    "icon": "/icons/soul_of_xeron_in_blood.png",
+    "droppedBy": ["Ксерон Blood Raid"],
+    "craftsInto": [
+      "trophy_upgrade_20",
+      "enhancement_sketch_8",
+      "infinity_gauntlet",
+      "paragon_scroll_15",
+      "vampires_relic_1",
+      "vampires_relic_2",
+      "vampires_relic_3",
+      "diary_set_3"
+    ]
+  },
+  {
+    "id": "dark_grimoire",
+    "name": "Темный Гримуар",
+    "icon": "/icons/dummy.png",
+    "droppedBy": ["Тёмная Хранительница Знаний"]
+  },
+  {
+    "id": "book_of_strength",
+    "name": "Книга Силы",
+    "icon": "/icons/dummy.png",
+    "droppedBy": ["Хранительница Знаний"]
+  },
+  {
+    "id": "book_of_agility",
+    "name": "Книга Ловкости",
+    "icon": "/icons/dummy.png",
+    "droppedBy": ["Хранительница Знаний"]
+  },
+  {
+    "id": "book_of_wisdom",
+    "name": "Книга разума",
+    "icon": "/icons/dummy.png",
+    "droppedBy": ["Хранительница Знаний"]
+  },
+  {
+    "id": "dark_flame_chainmail",
+    "name": "Кольчуга темного пламени",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "emerald",
+    "name": "Изумруд",
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "creator_set_activator",
+    "name": "Активатор сета творцов",
+    "icon": "/icons/dummy.png"
+  }
+]

@@ -28,26 +28,6 @@
     "icon": "/icons/bloody_impudence.png"
   },
   {
-    "id": "paragon_scroll_10_recipe",
-    "name": "Свиток улучшения парагона 10 (рецепт)",
-    "boughtFrom": "Повелитель ужаса (Кровавый Бастион)",
-    "craftsInto": ["paragon_scroll_10"],
-    "icon": "/icons/magic_recipe.png"
-  },
-  {
-    "id": "paragon_scroll_10",
-    "name": "Свиток улучшения парагона(10)",
-    "description": "Улучшает парагон до 10 уровня.",
-    "components": [
-      "bloody_robot",
-      "shadow_vampire",
-      "bloody_fury",
-      "bloody_impudence",
-      "paragon_scroll_10_recipe"
-    ],
-    "icon": "/icons/paragon.png"
-  },
-  {
     "id": "introduction_to_absolute_recipe",
     "name": "Введение в абсолют (рецепт)",
     "boughtFrom": "Рыцарь смерти (Кровавый Бастион)",
@@ -70,5 +50,29 @@
       "pendant_upgrade_5"
     ],
     "icon": "/icons/introduction_to_absolute.png"
+  },
+  {
+    "id": "bloodbath",
+    "icon": "/icons/bloodbath.png",
+    "name": "Кровавая баня",
+    "craftsInto": ["integral_set_2", "bundle_pack_2", "paragon_scroll_1"]
+  },
+  {
+    "id": "blood_crater",
+    "icon": "/icons/blood_crater.png",
+    "name": "Жерло крови",
+    "craftsInto": ["integral_set_2", "bundle_pack_2", "paragon_scroll_1"]
+  },
+  {
+    "id": "evil_root",
+    "icon": "/icons/evil_root.png",
+    "name": "Корень зла",
+    "craftsInto": ["integral_set_2", "bundle_pack_2", "paragon_scroll_1"]
+  },
+  {
+    "id": "blood_injection",
+    "icon": "/icons/blood_injection.png",
+    "name": "Кровавая инъекция",
+    "craftsInto": ["integral_set_2", "bundle_pack_2", "paragon_scroll_1"]
   }
 ]
