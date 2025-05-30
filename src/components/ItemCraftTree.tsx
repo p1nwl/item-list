@@ -39,44 +39,53 @@ const ItemCraftTree = ({ item, allItems, onSelectItem }: Props) => {
         style={{ marginLeft: `${level * 16}px` }}
         className="mt-2"
       >
-        <div className="flex items-center justify-between gap-2 pr-2">
-          <div
-            className="flex items-center gap-2 cursor-pointer"
-            onClick={() => onSelectItem(item)}
-          >
-            {item.icon && (
-              <img
-                src={item.icon || "/icons/placeholder.png"}
-                alt={item.name}
-                className="w-10 h-10 object-contain"
-              />
+        <div className="flex flex-col gap-1">
+          <div className="flex items-center justify-between gap-2 pr-2">
+            <div
+              className="flex items-center gap-2 cursor-pointer"
+              onClick={() => onSelectItem(item)}
+            >
+              {item.icon && (
+                <img
+                  src={item.icon || "/icons/placeholder.png"}
+                  alt={item.name}
+                  className="w-10 h-10 object-contain"
+                />
+              )}
+              <span className="text-blue-600 hover:underline">{item.name}</span>
+            </div>
+
+            {isExpandable && (
+              <button
+                onClick={() => toggleExpand(item.id)}
+                aria-label={isExpanded ? "Свернуть" : "Развернуть"}
+                className="text-gray-600 hover:text-black focus:outline-none"
+                style={{
+                  background: "none",
+                  border: "none",
+                  padding: 0,
+                  margin: 0,
+                  cursor: "pointer",
+                  fontWeight: "bold",
+                  fontSize: "14px",
+                  lineHeight: 1,
+                  transition: "transform 0.2s ease",
+                  transform: isExpanded ? "rotate(90deg)" : "rotate(0deg)",
+                  display: "inline-block",
+                  userSelect: "none",
+                }}
+                onMouseDown={(e) => e.preventDefault()}
+              >
+                &gt;
+              </button>
             )}
-            <span className="text-blue-600 hover:underline">{item.name}</span>
           </div>
 
-          {isExpandable && (
-            <button
-              onClick={() => toggleExpand(item.id)}
-              aria-label={isExpanded ? "Свернуть" : "Развернуть"}
-              className="text-gray-600 hover:text-black focus:outline-none"
-              style={{
-                background: "none",
-                border: "none",
-                padding: 0,
-                margin: 0,
-                cursor: "pointer",
-                fontWeight: "bold",
-                fontSize: "14px",
-                lineHeight: 1,
-                transition: "transform 0.2s ease",
-                transform: isExpanded ? "rotate(90deg)" : "rotate(0deg)",
-                display: "inline-block",
-                userSelect: "none",
-              }}
-              onMouseDown={(e) => e.preventDefault()}
-            >
-              &gt;
-            </button>
+          {/* Новая секция: источники дропа */}
+          {item.droppedBy && item.droppedBy.length > 0 && (
+            <p className="text-sm text-gray-600 ml-12">
+              <strong>Падает с:</strong> {item.droppedBy.join(", ")}
+            </p>
           )}
         </div>
 

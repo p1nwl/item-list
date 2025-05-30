@@ -150,5 +150,12 @@
     "id": "kyanite",
     "name": "Кианит",
     "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "carnival_mask_recipe",
+    "name": "Маска с карнавала (рецепт)",
+    "icon": "/icons/hearthstone_recipe.png",
+    "craftsInto": ["carnival_mask"],
+    "droppedBy": ["Результат Снадобья"]
   }
 ]

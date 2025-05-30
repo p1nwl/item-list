@@ -55,24 +55,75 @@
     "id": "bloodbath",
     "icon": "/icons/bloodbath.png",
     "name": "Кровавая баня",
-    "craftsInto": ["integral_set_2", "bundle_pack_2", "paragon_scroll_1"]
+    "craftsInto": ["integral_set_2", "bundle_pack_2", "paragon_scroll_1"],
+    "droppedBy": ["Кровосос Easy"]
   },
   {
     "id": "blood_crater",
     "icon": "/icons/blood_crater.png",
     "name": "Жерло крови",
-    "craftsInto": ["integral_set_2", "bundle_pack_2", "paragon_scroll_1"]
+    "craftsInto": ["integral_set_2", "bundle_pack_2", "paragon_scroll_1"],
+    "droppedBy": ["Кровосос Easy"]
   },
   {
     "id": "evil_root",
     "icon": "/icons/evil_root.png",
     "name": "Корень зла",
-    "craftsInto": ["integral_set_2", "bundle_pack_2", "paragon_scroll_1"]
+    "craftsInto": ["integral_set_2", "bundle_pack_2", "paragon_scroll_1"],
+    "droppedBy": ["Кровосос Easy"]
   },
   {
     "id": "blood_injection",
     "icon": "/icons/blood_injection.png",
     "name": "Кровавая инъекция",
-    "craftsInto": ["integral_set_2", "bundle_pack_2", "paragon_scroll_1"]
+    "craftsInto": ["integral_set_2", "bundle_pack_2", "paragon_scroll_1"],
+    "droppedBy": ["Кровосос Easy"]
+  },
+  {
+    "id": "ferocity_of_beasts",
+    "name": "Свирепость зверей",
+    "icon": "/icons/ferocity_of_beasts.png",
+    "droppedBy": ["Проклятый художник"]
+  },
+  {
+    "id": "gaze",
+    "name": "Пристальный взгляд",
+    "icon": "/icons/gaze.png",
+    "droppedBy": ["Проклятый художник"]
+  },
+  {
+    "id": "energy",
+    "name": "Энергичность",
+    "icon": "/icons/energy.png",
+    "droppedBy": ["Проклятый художник"]
+  },
+  {
+    "id": "repairology",
+    "name": "Ремонтология",
+    "icon": "/icons/repairology.png",
+    "droppedBy": ["Проклятый художник"]
+  },
+  {
+    "id": "carnival_mask",
+    "name": "Маска с карнавала",
+    "icon": "/icons/carnival_mask.png",
+    "components": [
+      "ferocity_of_beasts",
+      "gaze",
+      "energy",
+      "repairology",
+      "carnival_mask_recipe"
+    ],
+    "craftsInto": [
+      "insignia_1",
+      "insignia_2",
+      "insignia_3",
+      "sign_of_horror_1",
+      "sign_of_horror_2",
+      "sign_of_horror_3",
+      "sign_of_uniqueness_1",
+      "sign_of_uniqueness_2",
+      "sign_of_uniqueness_3"
+    ]
   }
 ]
