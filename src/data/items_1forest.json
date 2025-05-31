@@ -63,5 +63,15 @@
     "id": "soul_of_destroyer_in_blood",
     "name": "Душа Разрушителя в крови",
     "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "starleaf_root",
+    "name": "Корень Звездолиста",
+    "icon": "/icons/starleaf_root.png",
+    "description": "Звездолист использовали древние шаманы при приготовлении разных отваров.",
+    "bonus": [
+      { "stat": "MP", "value": 120 },
+      { "stat": "Intelligence", "value": 10 }
+    ]
   }
 ]

@@ -1,45 +1,51 @@
-import { useState, useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAllItems } from "../utils/itemResolver";
 import type { Item } from "../types/Item";
 import ItemFilters from "../components/ItemFilters";
+import { filterItems } from "../utils/filterItems";
+
+const STORAGE_KEY = "itemFilters";
+
+const getInitial = <T,>(key: string, fallback: T): T => {
+  if (typeof window === "undefined") return fallback;
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+    return saved[key] ?? fallback;
+  } catch {
+    return fallback;
+  }
+};
 
 const ItemList = () => {
-  const [search, setSearch] = useState("");
-  const [sortBy, setSortBy] = useState<"name" | "id">("name");
-  const [dropFilter, setDropFilter] = useState("");
-  const [componentFilter, setComponentFilter] = useState("");
-
   const navigate = useNavigate();
   const items: Item[] = getAllItems();
+
+  const [search, setSearch] = useState(() => getInitial("search", ""));
+  const [sortBy, setSortBy] = useState<"name" | "id">(() =>
+    getInitial("sortBy", "name")
+  );
+  const [dropFilter, setDropFilter] = useState(() =>
+    getInitial("dropFilter", "")
+  );
+  const [componentFilter, setComponentFilter] = useState(() =>
+    getInitial("componentFilter", "")
+  );
+
+  useEffect(() => {
+    const data = { search, sortBy, dropFilter, componentFilter };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  }, [search, sortBy, dropFilter, componentFilter]);
 
   const shouldRender = Boolean(search || dropFilter || componentFilter);
 
   const filtered = useMemo(() => {
-    return items
-      .filter((item) =>
-        search ? item.name.toLowerCase().includes(search.toLowerCase()) : true
-      )
-      .filter((item) =>
-        dropFilter
-          ? item.droppedBy?.some((src) =>
-              src.toLowerCase().includes(dropFilter.toLowerCase())
-            ) ?? false
-          : true
-      )
-      .filter((item) =>
-        componentFilter
-          ? item.components?.some((comp) =>
-              comp.toLowerCase().includes(componentFilter.toLowerCase())
-            ) ?? false
-          : true
-      )
-      .sort((a, b) =>
-        a[sortBy].localeCompare(b[sortBy], undefined, {
-          numeric: true,
-          sensitivity: "base",
-        })
-      );
+    return filterItems(items, {
+      search,
+      dropFilter,
+      componentFilter,
+      sortBy,
+    });
   }, [items, search, dropFilter, componentFilter, sortBy]);
 
   return (

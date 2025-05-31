@@ -9,6 +9,18 @@ interface Props {
   onSelectItem: (item: Item) => void;
 }
 
+// Словарь отображаемых названий характеристик
+const statNames: Record<string, string> = {
+  HP: "HP",
+  MP: "MP",
+  Strength: "сила",
+  Agility: "ловкость",
+  Intelligence: "разум",
+  Armor: "броня",
+  Damage: "урон",
+  Speed: "скорость",
+};
+
 const ItemDetail = ({ item, items, onBack, onSelectItem }: Props) => {
   const navigate = useNavigate();
 
@@ -45,6 +57,17 @@ const ItemDetail = ({ item, items, onBack, onSelectItem }: Props) => {
             <p className="text-gray-700">{item.description}</p>
           ) : (
             <p className="text-gray-500 italic">Описание отсутствует</p>
+          )}
+
+          {/* Отображение бонусов */}
+          {item.bonus && item.bonus.length > 0 && (
+            <div className="mt-2">
+              {item.bonus.map((b, idx) => (
+                <p key={idx} className="text-orange-600 font-semibold">
+                  +{b.value} {statNames[b.stat] || b.stat}
+                </p>
+              ))}
+            </div>
           )}
         </div>
       </div>

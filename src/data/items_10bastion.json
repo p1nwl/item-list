@@ -60,7 +60,7 @@
   },
   {
     "id": "blood_crater",
-    "icon": "/icons/blood_crater.png",
+    "icon": "/icons/vampire_soul.png",
     "name": "Жерло крови",
     "craftsInto": ["integral_set_2", "bundle_pack_2", "paragon_scroll_1"],
     "droppedBy": ["Кровосос Easy"]
@@ -83,25 +83,29 @@
     "id": "ferocity_of_beasts",
     "name": "Свирепость зверей",
     "icon": "/icons/ferocity_of_beasts.png",
-    "droppedBy": ["Проклятый художник"]
+    "droppedBy": ["Проклятый художник"],
+    "craftsInto": ["carnival_mask"]
   },
   {
     "id": "gaze",
     "name": "Пристальный взгляд",
     "icon": "/icons/gaze.png",
-    "droppedBy": ["Проклятый художник"]
+    "droppedBy": ["Проклятый художник"],
+    "craftsInto": ["carnival_mask"]
   },
   {
     "id": "energy",
     "name": "Энергичность",
     "icon": "/icons/energy.png",
-    "droppedBy": ["Проклятый художник"]
+    "droppedBy": ["Проклятый художник"],
+    "craftsInto": ["carnival_mask"]
   },
   {
     "id": "repairology",
     "name": "Ремонтология",
     "icon": "/icons/repairology.png",
-    "droppedBy": ["Проклятый художник"]
+    "droppedBy": ["Проклятый художник"],
+    "craftsInto": ["carnival_mask"]
   },
   {
     "id": "carnival_mask",
@@ -125,5 +129,11 @@
       "sign_of_uniqueness_2",
       "sign_of_uniqueness_3"
     ]
+  },
+  {
+    "id": "vampire_soul",
+    "name": "Душа вампира",
+    "icon": "/icons/vampire_soul.png",
+    "droppedBy": ["Жрица Сухожилий"]
   }
 ]
