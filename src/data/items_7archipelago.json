@@ -2,7 +2,8 @@
   {
     "id": "courier_kai",
     "name": "курьер Кай",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/archipelago/courier_kai.png",
+    "craftsInto": ["trophy_upgrade_23"]
   },
   {
     "id": "soul_of_kai_in_blood",

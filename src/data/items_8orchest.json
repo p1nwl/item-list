@@ -9,152 +9,219 @@
       "ruined_soul",
       "axe_of_bones"
     ],
-    "icon": "/icons/fusion.png"
+    "icon": "/icons/orchest/fusion.png"
   },
   {
     "id": "soul_of_galahan",
     "name": "Душа Галахана",
-    "icon": "/icons/soul_of_galahan.png",
-    "craftsInto": ["fusion"],
+    "icon": "/icons/orchest/soul_of_galahan.png",
+    "craftsInto": [
+      "fusion",
+      "poisonous_rune_of_strength",
+      "poisonous_rune_of_agility",
+      "poisonous_rune_of_wisdom",
+      "vicious_grip",
+      "dance_of_blades"
+    ],
     "droppedBy": ["Галахан"]
   },
   {
     "id": "soul_of_more",
     "name": "Душа Мора",
-    "icon": "/icons/soul_of_more.png",
-    "craftsInto": ["fusion"],
+    "icon": "/icons/orchest/soul_of_more.png",
+    "craftsInto": [
+      "fusion",
+      "poisonous_rune_of_strength",
+      "poisonous_rune_of_agility",
+      "poisonous_rune_of_wisdom",
+      "lightning_strike",
+      "cryptogram",
+      "breath_of_life"
+    ],
     "droppedBy": ["Мор"]
   },
   {
     "id": "soul_of_crusher",
     "name": "Душа Крушителя",
-    "icon": "/icons/soul_of_crusher.png",
-    "craftsInto": ["fusion"],
+    "icon": "/icons/orchest/soul_of_crusher.png",
+    "craftsInto": [
+      "fusion",
+      "poisonous_rune_of_strength",
+      "poisonous_rune_of_agility",
+      "poisonous_rune_of_wisdom",
+      "poison_fan"
+    ],
     "droppedBy": ["Крушитель"]
   },
   {
     "id": "ruined_soul",
     "name": "Загубленная душа",
-    "icon": "/icons/ruined_soul.png",
+    "icon": "/icons/orchest/ruined_soul.png",
     "craftsInto": ["fusion"],
-    "droppedBy": ["Результат Снадобья"]
+    "droppedBy": ["Boss Результат Снадобья"]
   },
   {
     "id": "axe_of_bones",
     "name": "Топор из остатков костей",
-    "icon": "/icons/axe_of_bones.png",
+    "icon": "/icons/orchest/axe_of_bones.png",
     "craftsInto": ["fusion"],
-    "droppedBy": ["Костяшка"]
+    "droppedBy": ["Boss Костяшка"]
   },
   {
     "id": "courier_marquis",
     "name": "курьер Маркиз",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/dummy.png"
   },
   {
     "id": "soul_of_marquis_in_blood",
     "name": "Душа Маркиза в крови",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/dummy.png"
   },
   {
     "id": "cursed_unity",
     "name": "Проклятое Единство",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/dummy.png"
   },
   {
     "id": "dark_unity",
     "name": "Темное единство",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/dark_unity.png"
   },
   {
     "id": "poisonous_rune_of_strength",
     "name": "Ядовитая руна Силы",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/poisonous_rune_of_strength.png",
+    "craftsInto": [
+      "poisonous_armor",
+      "poisonous_appearance",
+      "poisonous_axe",
+      "throw_the_gauntlet",
+      "stand_to_death",
+      "trophy_upgrade_25"
+    ],
+    "components": [
+      "soul_of_crusher",
+      "soul_of_galahan",
+      "soul_of_more",
+      "axe_of_bones",
+      "bark",
+      "poisinous_rune_of_strength_recipe"
+    ]
   },
   {
     "id": "poisonous_rune_of_agility",
     "name": "Ядовитая руна Ловкости",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/poisonous_rune_of_agility.png",
+    "craftsInto": [
+      "poisonous_dager",
+      "cut_from_the_inside",
+      "trophy_upgrade_25"
+    ],
+    "components": [
+      "soul_of_crusher",
+      "soul_of_galahan",
+      "soul_of_more",
+      "axe_of_bones",
+      "bark",
+      "poisinous_rune_of_agility_recipe"
+    ]
   },
   {
     "id": "poisonous_rune_of_wisdom",
     "name": "Ядовитая руна Разума",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/poisonous_rune_of_wisdom.png",
+    "craftsInto": [
+      "poisonous_mask",
+      "poisonous_eye",
+      "poisonous_whirlwind",
+      "summon_poseidon",
+      "put_on_someone",
+      "eat_this_yummy",
+      "trophy_upgrade_25"
+    ],
+    "components": [
+      "soul_of_crusher",
+      "soul_of_galahan",
+      "soul_of_more",
+      "axe_of_bones",
+      "bark",
+      "poisinous_rune_of_wisdom_recipe"
+    ]
   },
   {
     "id": "cursed_amulet_es",
     "name": "Проклятый оберег(Э.С)",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/dummy.png"
   },
   {
     "id": "magical_amulet_es",
     "name": "Магический оберег(Э.С)",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/dummy.png"
   },
   {
     "id": "armor_of_frost",
     "name": "Броня Мрази",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/dummy.png"
   },
   {
     "id": "rotten_carcass",
     "name": "Гнилая туша",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/dummy.png"
   },
   {
     "id": "brightness_3",
     "name": "Яркость(3)",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/dummy.png"
   },
   {
     "id": "flight_of_thought_3",
     "name": "Полет мысли(3)",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/dummy.png"
   },
   {
     "id": "burst_of_rage_3",
     "name": "Вспышка ярости(3)",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/dummy.png"
   },
   {
     "id": "cursed_whirlwind",
     "name": "Проклятый вихрь",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/dummy.png"
   },
   {
     "id": "amulet_of_vengeance",
     "name": "Оберег возмездия",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/dummy.png"
   },
   {
     "id": "broken_scythe",
     "name": "Сломанная коса",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/dummy.png"
   },
   {
     "id": "golden",
     "name": "Золотой",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/dummy.png"
   },
   {
     "id": "staff_of_darkness",
     "name": "Посох тёмных",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/dummy.png"
   },
   {
     "id": "shards",
     "name": "Черепки",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/dummy.png"
   },
   {
     "id": "kyanite",
     "name": "Кианит",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/orchest/dummy.png"
   },
   {
     "id": "carnival_mask_recipe",
     "name": "Маска с карнавала (рецепт)",
-    "icon": "/icons/hearthstone_recipe.png",
+    "icon": "/icons/orchest/hearthstone_recipe.png",
     "craftsInto": ["carnival_mask"],
     "droppedBy": ["Результат Снадобья"]
   }

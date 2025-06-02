@@ -2,46 +2,130 @@
   {
     "id": "ice_shard",
     "name": "Осколок льда",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/other/dummy.png"
   },
   {
     "id": "dark_claw_of_prime",
     "name": "Темный Коготь Прайма",
-    "icon": "/icons/dark_fang.png"
+    "icon": "/icons/other/dark_fang.png"
   },
   {
     "id": "bloodstained_claw",
     "name": "Окровавленный Коготь",
-    "icon": "/icons/bloody_fang.png"
+    "icon": "/icons/other/bloody_fang.png"
   },
   {
     "id": "essence_of_stone",
     "name": "Эссенция Камня",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/other/dummy.png"
   },
   {
     "id": "essence_of_earth",
     "name": "Эссенция земли",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/other/dummy.png"
   },
   {
     "id": "essence_of_the_sea",
     "name": "Эссенция моря",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/other/dummy.png"
   },
   {
     "id": "essence_of_darkness",
     "name": "Эссенция тьмы",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/other/dummy.png"
   },
   {
     "id": "cube_opal",
     "name": "Кубик(опал)",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/other/dummy.png"
   },
   {
     "id": "bloody_diadem_emerald",
     "name": "Кровавая диадема(изумруд)",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/other/dummy.png"
+  },
+  {
+    "id": "common-trash",
+    "name": "Обычный мусор",
+    "description": "Можно продать Скупщику хлама, кликнув по нему правой клавишей. Не больше 10 штук за раз!",
+    "droppedBy": ["Темный Волк"],
+    "isTrash": true,
+    "trashInfo": {
+      "goldRange": [20, 100],
+      "markRange": [2, 10],
+      "xpRange": [40, 100],
+      "dropItemId": "engineer-part"
+    },
+    "icon": "/icons/other/trash.jpg"
+  },
+  {
+    "id": "uncommon-trash",
+    "name": "Необычный мусор",
+    "description": "Можно продать Скупщику хлама, кликнув по нему правой клавишей. Не больше 10 штук за раз!",
+    "droppedBy": ["Паук Огня"],
+    "isTrash": true,
+    "trashInfo": {
+      "goldRange": [25, 150],
+      "markRange": [3, 15],
+      "xpRange": [50, 110],
+      "dropItemId": "engineer-part"
+    },
+    "icon": "/icons/other/trash.jpg"
+  },
+  {
+    "id": "rare-trash",
+    "name": "Редкий мусор",
+    "description": "Можно продать Скупщику хлама, кликнув по нему правой клавишей. Не больше 10 штук за раз!",
+    "droppedBy": ["Зеленый Драконид"],
+    "isTrash": true,
+    "trashInfo": {
+      "goldRange": [30, 170],
+      "markRange": [4, 20],
+      "xpRange": [60, 130],
+      "dropItemId": "engineer-part"
+    },
+    "icon": "/icons/other/trash.jpg"
+  },
+  {
+    "id": "useful-trash",
+    "name": "Полезный мусор",
+    "description": "Можно продать Скупщику хлама, кликнув по нему правой клавишей. Не больше 10 штук за раз!",
+    "droppedBy": ["Джунглевый хищник"],
+    "isTrash": true,
+    "trashInfo": {
+      "goldRange": [35, 200],
+      "markRange": [5, 30],
+      "xpRange": [80, 150],
+      "dropItemId": "engineer-part"
+    },
+    "icon": "/icons/other/trash.jpg"
+  },
+  {
+    "id": "valuable-trash",
+    "name": "Ценный мусор",
+    "description": "Можно продать Скупщику хлама, кликнув по нему правой клавишей. Не больше 10 штук за раз!",
+    "droppedBy": ["Кровавый ковбой"],
+    "isTrash": true,
+    "trashInfo": {
+      "goldRange": [50, 290],
+      "markRange": [10, 33],
+      "xpRange": [100, 180],
+      "dropItemId": "engineer-part"
+    },
+    "icon": "/icons/other/trash.jpg"
+  },
+  {
+    "id": "high-value-trash",
+    "name": "Мусор высокой ценности",
+    "description": "Можно продать Скупщику хлама, кликнув по нему правой клавишей. Не больше 10 штук за раз!",
+    "droppedBy": ["Сторож Огня"],
+    "isTrash": true,
+    "trashInfo": {
+      "goldRange": [100, 300],
+      "markRange": [14, 34],
+      "xpRange": [130, 200],
+      "dropItemId": "engineer-part"
+    },
+    "icon": "/icons/other/trash.jpg"
   }
 ]

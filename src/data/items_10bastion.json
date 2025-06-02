@@ -4,35 +4,35 @@
     "name": "Кровавый робот",
     "droppedBy": ["Кровосос Raid Hard"],
     "craftsInto": ["paragon_scroll_10", "introduction_to_absolute"],
-    "icon": "/icons/bloody_robot.png"
+    "icon": "/icons/bastion/bloody_robot.png"
   },
   {
     "id": "shadow_vampire",
     "name": "Теневой вампир",
     "droppedBy": ["Кровосос Raid Hard"],
     "craftsInto": ["paragon_scroll_10", "introduction_to_absolute"],
-    "icon": "/icons/shadow_vampire.png"
+    "icon": "/icons/bastion/shadow_vampire.png"
   },
   {
     "id": "bloody_fury",
     "name": "Кровавая ярость",
     "droppedBy": ["Кровосос Raid Hard"],
     "craftsInto": ["paragon_scroll_10", "introduction_to_absolute"],
-    "icon": "/icons/bloody_fury.png"
+    "icon": "/icons/bastion/bloody_fury.png"
   },
   {
     "id": "bloody_impudence",
     "name": "Кровавая дерзость",
     "droppedBy": ["Кровосос Raid Hard"],
     "craftsInto": ["paragon_scroll_10", "introduction_to_absolute"],
-    "icon": "/icons/bloody_impudence.png"
+    "icon": "/icons/bastion/bloody_impudence.png"
   },
   {
     "id": "introduction_to_absolute_recipe",
     "name": "Введение в абсолют (рецепт)",
     "boughtFrom": "Рыцарь смерти (Кровавый Бастион)",
     "craftsInto": ["introduction_to_absolute"],
-    "icon": "/icons/introduction_to_absolute_recipe.png"
+    "icon": "/icons/bastion/introduction_to_absolute_recipe.png"
   },
   {
     "id": "introduction_to_absolute",
@@ -49,32 +49,32 @@
       "trophy_upgrade_26",
       "pendant_upgrade_5"
     ],
-    "icon": "/icons/introduction_to_absolute.png"
+    "icon": "/icons/bastion/introduction_to_absolute.png"
   },
   {
     "id": "bloodbath",
-    "icon": "/icons/bloodbath.png",
+    "icon": "/icons/bastion/bloodbath.png",
     "name": "Кровавая баня",
     "craftsInto": ["integral_set_2", "bundle_pack_2", "paragon_scroll_1"],
     "droppedBy": ["Кровосос Easy"]
   },
   {
     "id": "blood_crater",
-    "icon": "/icons/vampire_soul.png",
+    "icon": "/icons/bastion/vampire_soul.png",
     "name": "Жерло крови",
     "craftsInto": ["integral_set_2", "bundle_pack_2", "paragon_scroll_1"],
     "droppedBy": ["Кровосос Easy"]
   },
   {
     "id": "evil_root",
-    "icon": "/icons/evil_root.png",
+    "icon": "/icons/bastion/evil_root.png",
     "name": "Корень зла",
     "craftsInto": ["integral_set_2", "bundle_pack_2", "paragon_scroll_1"],
     "droppedBy": ["Кровосос Easy"]
   },
   {
     "id": "blood_injection",
-    "icon": "/icons/blood_injection.png",
+    "icon": "/icons/bastion/blood_injection.png",
     "name": "Кровавая инъекция",
     "craftsInto": ["integral_set_2", "bundle_pack_2", "paragon_scroll_1"],
     "droppedBy": ["Кровосос Easy"]
@@ -82,35 +82,35 @@
   {
     "id": "ferocity_of_beasts",
     "name": "Свирепость зверей",
-    "icon": "/icons/ferocity_of_beasts.png",
+    "icon": "/icons/bastion/ferocity_of_beasts.png",
     "droppedBy": ["Проклятый художник"],
     "craftsInto": ["carnival_mask"]
   },
   {
     "id": "gaze",
     "name": "Пристальный взгляд",
-    "icon": "/icons/gaze.png",
+    "icon": "/icons/bastion/gaze.png",
     "droppedBy": ["Проклятый художник"],
     "craftsInto": ["carnival_mask"]
   },
   {
     "id": "energy",
     "name": "Энергичность",
-    "icon": "/icons/energy.png",
+    "icon": "/icons/bastion/energy.png",
     "droppedBy": ["Проклятый художник"],
     "craftsInto": ["carnival_mask"]
   },
   {
     "id": "repairology",
     "name": "Ремонтология",
-    "icon": "/icons/repairology.png",
+    "icon": "/icons/bastion/repairology.png",
     "droppedBy": ["Проклятый художник"],
     "craftsInto": ["carnival_mask"]
   },
   {
     "id": "carnival_mask",
     "name": "Маска с карнавала",
-    "icon": "/icons/carnival_mask.png",
+    "icon": "/icons/bastion/carnival_mask.png",
     "components": [
       "ferocity_of_beasts",
       "gaze",
@@ -133,7 +133,7 @@
   {
     "id": "vampire_soul",
     "name": "Душа вампира",
-    "icon": "/icons/vampire_soul.png",
+    "icon": "/icons/bastion/vampire_soul.png",
     "droppedBy": ["Жрица Сухожилий"]
   }
 ]

@@ -62,7 +62,8 @@
   {
     "id": "soul_of_spider_in_blood",
     "name": "Душа Матери Пауков в крови",
-    "icon": "/icons/soulf_of_spider_in_blood.png"
+    "icon": "/icons/soulf_of_spider_in_blood.png",
+    "droppedBy": ["Boss Матерь Пауков Blood Raid"]
   },
   {
     "id": "phoenix",
@@ -78,5 +79,19 @@
     "id": "soul_ache",
     "name": "Душевная боль",
     "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "bark",
+    "name": "Кора",
+    "icon": "/icons/garden/bark.png",
+    "description": "Улучшает обсидиан",
+    "droppedBy": ["Boss Пагубный"],
+    "craftsInto": [
+      "poisonous_rune_of_agility",
+      "poisonous_rune_of_strength",
+      "poisonous_rune_of_wisdom",
+      "cursed_obsidian",
+      "shuriken"
+    ]
   }
 ]

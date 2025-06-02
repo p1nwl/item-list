@@ -3,31 +3,31 @@
     "id": "poisonous_chainmail",
     "name": "Ядовитая кольчуга",
     "droppedBy": ["Бронзовая Химера"],
-    "icon": "/icons/poisonous_chainmail.png"
+    "icon": "/icons/forest/poisonous_chainmail.png"
   },
   {
     "id": "tome_of_the_past",
     "name": "Том из прошлого",
     "droppedBy": ["Бронзовая Химера"],
-    "icon": "/icons/tome_of_the_past.png"
+    "icon": "/icons/forest/tome_of_the_past.png"
   },
   {
     "id": "gauntlet_of_greats",
     "name": "Рукавица Великих",
     "droppedBy": ["Бронзовая Химера"],
-    "icon": "/icons/gauntlet_of_greats.png"
+    "icon": "/icons/forest/gauntlet_of_greats.png"
   },
   {
     "id": "fury",
     "name": "Ярость",
     "droppedBy": ["Бронзовая Химера"],
-    "icon": "/icons/fury.png"
+    "icon": "/icons/forest/fury.png"
   },
   {
     "id": "breath_of_fire",
     "name": "Дыхание огня",
     "droppedBy": ["Бронзовая Химера"],
-    "icon": "/icons/breath_of_fire.png"
+    "icon": "/icons/forest/breath_of_fire.png"
   },
   {
     "id": "staff_of_fauna",
@@ -67,11 +67,37 @@
   {
     "id": "starleaf_root",
     "name": "Корень Звездолиста",
-    "icon": "/icons/starleaf_root.png",
+    "icon": "/icons/forest/starleaf_root.png",
     "description": "Звездолист использовали древние шаманы при приготовлении разных отваров.",
     "bonus": [
       { "stat": "MP", "value": 120 },
       { "stat": "Intelligence", "value": 10 }
-    ]
+    ],
+    "droppedBy": ["Злобный Брат"],
+    "craftsInto": ["wolf_medal"]
+  },
+  {
+    "id": "aborigine_horn",
+    "name": "Рог аборигенов",
+    "icon": "/icons/forest/aborigine_horn.jpg",
+    "description": "Древнее племя уже очень давно не живет в наших краях. Но тем не менее их изделия находят до сих пор.",
+    "bonus": [
+      { "stat": "Attack", "value": 120 },
+      { "stat": "Agility", "value": 10 }
+    ],
+    "droppedBy": ["Злобный Брат"],
+    "craftsInto": ["bear_gloves", "sword_of_the_forest"]
+  },
+  {
+    "id": "orc_drum",
+    "name": "Барабан Орков",
+    "icon": "/icons/forest/orc_drum.jpg",
+    "description": "Повышает вашу храбрость!",
+    "bonus": [
+      { "stat": "HP", "value": 100 },
+      { "stat": "Strength", "value": 10 }
+    ],
+    "droppedBy": ["Злобный Брат"],
+    "craftsInto": ["white_sword", "steel_armor"]
   }
 ]
