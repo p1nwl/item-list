@@ -85,13 +85,6 @@
     "name": "Кора",
     "icon": "/icons/garden/bark.png",
     "description": "Улучшает обсидиан",
-    "droppedBy": ["Boss Пагубный"],
-    "craftsInto": [
-      "poisonous_rune_of_agility",
-      "poisonous_rune_of_strength",
-      "poisonous_rune_of_wisdom",
-      "cursed_obsidian",
-      "shuriken"
-    ]
+    "droppedBy": ["Boss Пагубный"]
   }
 ]

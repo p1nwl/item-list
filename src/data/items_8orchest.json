@@ -15,56 +15,30 @@
     "id": "soul_of_galahan",
     "name": "Душа Галахана",
     "icon": "/icons/orchest/soul_of_galahan.png",
-    "craftsInto": [
-      "fusion",
-      "poisonous_rune_of_strength",
-      "poisonous_rune_of_agility",
-      "poisonous_rune_of_wisdom",
-      "vicious_grip",
-      "dance_of_blades"
-    ],
-    "droppedBy": ["Галахан"]
+    "droppedBy": ["Boss Галахан"]
   },
   {
     "id": "soul_of_more",
     "name": "Душа Мора",
     "icon": "/icons/orchest/soul_of_more.png",
-    "craftsInto": [
-      "fusion",
-      "poisonous_rune_of_strength",
-      "poisonous_rune_of_agility",
-      "poisonous_rune_of_wisdom",
-      "lightning_strike",
-      "cryptogram",
-      "breath_of_life"
-    ],
-    "droppedBy": ["Мор"]
+    "droppedBy": ["Boss Мор"]
   },
   {
     "id": "soul_of_crusher",
     "name": "Душа Крушителя",
     "icon": "/icons/orchest/soul_of_crusher.png",
-    "craftsInto": [
-      "fusion",
-      "poisonous_rune_of_strength",
-      "poisonous_rune_of_agility",
-      "poisonous_rune_of_wisdom",
-      "poison_fan"
-    ],
-    "droppedBy": ["Крушитель"]
+    "droppedBy": ["Boss Крушитель"]
   },
   {
     "id": "ruined_soul",
     "name": "Загубленная душа",
     "icon": "/icons/orchest/ruined_soul.png",
-    "craftsInto": ["fusion"],
     "droppedBy": ["Boss Результат Снадобья"]
   },
   {
     "id": "axe_of_bones",
     "name": "Топор из остатков костей",
     "icon": "/icons/orchest/axe_of_bones.png",
-    "craftsInto": ["fusion"],
     "droppedBy": ["Boss Костяшка"]
   },
   {
@@ -91,14 +65,6 @@
     "id": "poisonous_rune_of_strength",
     "name": "Ядовитая руна Силы",
     "icon": "/icons/orchest/poisonous_rune_of_strength.png",
-    "craftsInto": [
-      "poisonous_armor",
-      "poisonous_appearance",
-      "poisonous_axe",
-      "throw_the_gauntlet",
-      "stand_to_death",
-      "trophy_upgrade_25"
-    ],
     "components": [
       "soul_of_crusher",
       "soul_of_galahan",
@@ -112,11 +78,6 @@
     "id": "poisonous_rune_of_agility",
     "name": "Ядовитая руна Ловкости",
     "icon": "/icons/orchest/poisonous_rune_of_agility.png",
-    "craftsInto": [
-      "poisonous_dager",
-      "cut_from_the_inside",
-      "trophy_upgrade_25"
-    ],
     "components": [
       "soul_of_crusher",
       "soul_of_galahan",
@@ -130,15 +91,6 @@
     "id": "poisonous_rune_of_wisdom",
     "name": "Ядовитая руна Разума",
     "icon": "/icons/orchest/poisonous_rune_of_wisdom.png",
-    "craftsInto": [
-      "poisonous_mask",
-      "poisonous_eye",
-      "poisonous_whirlwind",
-      "summon_poseidon",
-      "put_on_someone",
-      "eat_this_yummy",
-      "trophy_upgrade_25"
-    ],
     "components": [
       "soul_of_crusher",
       "soul_of_galahan",
@@ -151,12 +103,12 @@
   {
     "id": "cursed_amulet_es",
     "name": "Проклятый оберег(Э.С)",
-    "icon": "/icons/orchest/dummy.png"
+    "icon": "/icons/orchest/cursed_amulet.png"
   },
   {
     "id": "magical_amulet_es",
     "name": "Магический оберег(Э.С)",
-    "icon": "/icons/orchest/dummy.png"
+    "icon": "/icons/orchest/magical_amulet.png"
   },
   {
     "id": "armor_of_frost",
@@ -221,8 +173,62 @@
   {
     "id": "carnival_mask_recipe",
     "name": "Маска с карнавала (рецепт)",
-    "icon": "/icons/orchest/hearthstone_recipe.png",
-    "craftsInto": ["carnival_mask"],
+    "icon": "/icons/hearthstone_recipe.png",
     "droppedBy": ["Результат Снадобья"]
+  },
+  {
+    "id": "magical_amulet_1",
+    "name": "Магический оберег(1)",
+    "icon": "/icons/orchest/magical_amulet.png",
+    "components": [
+      "code_of_necromancers",
+      "book_of_strength",
+      "book_of_agility",
+      "book_of_wisdom",
+      "magical_amulet_recipe"
+    ]
+  },
+  {
+    "id": "code_of_necromancers",
+    "name": "Кодекс некромантов",
+    "icon": "/icons/forest/tome.jpg",
+    "description": "Собирается из 10-и Страниц Кодекса.",
+    "additionalInfoTitle": "Страница Кодекса получается с заданий:",
+    "additionalInfo": [
+      "Вожак кентавров",
+      "Узуран",
+      "Великая опасность",
+      "Ядовитая опасность",
+      "Проверка духа",
+      "Страж течений",
+      "Дорога дальняя",
+      "Смерть",
+      "Покажите мне путь",
+      "Убить мурлока-раба (находится в невидимости на острове рядом с продавцами рецептов на реликвии и чёрные предметы, чтобы попасть туда необходимо купить Фрегат в здании \"Верфь ночных эльфов\" в Орхесте и доплыть)"
+    ]
+  },
+  {
+    "id": "magical_amulet_recipe",
+    "name": "Магический оберег (рецепт)",
+    "icon": "/icons/guldan_recipe.png",
+    "boughtFrom": ["Принц Феникс"]
+  },
+  {
+    "id": "magical_amulet_2",
+    "name": "Магический оберег(2)",
+    "icon": "/icons/orchest/magical_amulet.png",
+    "components": ["magical_amulet_1", "ancient_parchment"]
+  },
+  {
+    "id": "magical_amulet_3",
+    "name": "Магический оберег(3)",
+    "icon": "/icons/orchest/magical_amulet.png",
+    "components": ["magical_amulet_2", "rotten_skull"]
+  },
+  {
+    "id": "rotten_skull",
+    "name": "Гнилой череп",
+    "icon": "/icons/dummy.png",
+    "droppedBy": ["Boss Асмодеус"]
   }
 ]

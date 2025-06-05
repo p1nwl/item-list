@@ -9,24 +9,28 @@ interface Props {
   onSelectItem: (item: Item) => void;
 }
 
-// Словарь отображаемых названий характеристик
 const statNames: Record<string, string> = {
   HP: "HP",
+  HPRegen: "ед.здоровья/сек",
   MP: "MP",
   Strength: "силы",
   Agility: "ловкости",
   Intelligence: "разума",
-  Armor: "брони",
+  Defense: "защиты",
   Damage: "урона",
   Speed: "скорости",
   Attack: "атаки",
+  Parameters: "к параметрам",
+  MDef: "защиты от магии",
 };
 
 const ItemDetail = ({ item, items, onBack, onSelectItem }: Props) => {
   const navigate = useNavigate();
 
   const resolveItem = (id: string) => items.find((i) => i.id === id);
-
+  {
+    /* Отрисовка мусора */
+  }
   if (item.isTrash && item.trashInfo) {
     const dropItem = items.find((i) => i.id === item.trashInfo?.dropItemId);
 
@@ -70,7 +74,7 @@ const ItemDetail = ({ item, items, onBack, onSelectItem }: Props) => {
           </div>
         )}
 
-        <div className="text-sm mt-2">
+        <div className="text-sm mt-2 border-4 border-yellow-300 p-4 rounded-lg bg-yellow-50 inline-block">
           <p className="mb-1 font-bold">Награда: </p>
           <p className="font-bold text-yellow-600">
             {item.trashInfo.goldRange[0]}–{item.trashInfo.goldRange[1]} золота *
@@ -87,13 +91,13 @@ const ItemDetail = ({ item, items, onBack, onSelectItem }: Props) => {
 
           {dropItem && (
             <p className="mt-2">
-              Обычная деталь инженера с шансом 11% * количество зарядов —{" "}
               <span
                 onClick={() => onSelectItem(dropItem)}
                 className="text-blue-600 hover:underline cursor-pointer"
               >
                 {dropItem.name}
-              </span>
+              </span>{" "}
+              с шансом 11% * количество зарядов
             </p>
           )}
         </div>
@@ -142,10 +146,28 @@ const ItemDetail = ({ item, items, onBack, onSelectItem }: Props) => {
                   +{b.value} {statNames[b.stat] || b.stat}
                 </p>
               ))}
+              {item.ability && (
+                <p className="text-blue-500 font-semibold">{item.ability}</p>
+              )}
             </div>
           )}
         </div>
       </div>
+
+      {item.additionalInfoTitle &&
+        Array.isArray(item.additionalInfo) &&
+        item.additionalInfo.length > 0 && (
+          <div className="mb-6">
+            <h2 className="text-lg font-medium mb-2">
+              {item.additionalInfoTitle}
+            </h2>
+            <ol className="list-decimal pl-5 space-y-1">
+              {item.additionalInfo.map((text, idx) => (
+                <li key={idx}>{text}</li>
+              ))}
+            </ol>
+          </div>
+        )}
 
       {/* Где продаётся */}
       {item.boughtFrom && (

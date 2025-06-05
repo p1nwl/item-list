@@ -3,31 +3,74 @@
     "id": "poisonous_chainmail",
     "name": "Ядовитая кольчуга",
     "droppedBy": ["Бронзовая Химера"],
-    "icon": "/icons/forest/poisonous_chainmail.png"
+    "icon": "/icons/forest/poisonous_chainmail.jpg",
+    "description": "Ядом, конечно, не травит, но вещь не из мусора.",
+    "bonus": [
+      { "stat": "HP", "value": 700 },
+      { "stat": "Defense", "value": 20 },
+      { "stat": "MDef", "value": "10%" },
+      { "stat": "HPRegen", "value": "10%" }
+    ]
   },
   {
     "id": "tome_of_the_past",
     "name": "Том из прошлого",
     "droppedBy": ["Бронзовая Химера"],
-    "icon": "/icons/forest/tome_of_the_past.png"
+    "icon": "/icons/forest/tome.jpg",
+    "description": "Альтернативная вещица.",
+    "bonus": [
+      { "stat": "Parameters", "value": 45 },
+      { "stat": "HP", "value": 300 },
+      { "stat": "MP", "value": 350 },
+      { "stat": "Attack", "value": 75 }
+    ]
   },
   {
     "id": "gauntlet_of_greats",
     "name": "Рукавица Великих",
     "droppedBy": ["Бронзовая Химера"],
-    "icon": "/icons/forest/gauntlet_of_greats.png"
+    "icon": "/icons/forest/gauntlet_of_greats.jpg",
+    "description": "Этой перчаткой можно спокойно держать пламя, не боясь повредить руку.",
+    "bonus": [
+      { "stat": "Attack", "value": 150 },
+      { "stat": "AS", "value": "20%" }
+    ],
+    "ability": "Способность \"Атака\"(+450 урона на 10 сек., перезарядка 30 сек.)"
   },
   {
     "id": "fury",
     "name": "Ярость",
     "droppedBy": ["Бронзовая Химера"],
-    "icon": "/icons/forest/fury.png"
+    "icon": "/icons/forest/fury.jpg",
+    "description": "Не только красивый вид, но и классное применение.",
+    "bonus": [{ "stat": "Agility", "value": 45 }, { "stat": "Damage" }, {}],
+    "ability": "Способность \"Стремительность\"(Длительность 20 сек., +30% MS, кд - 25 сек., урон +1500 ед.)"
   },
   {
     "id": "breath_of_fire",
     "name": "Дыхание огня",
     "droppedBy": ["Бронзовая Химера"],
-    "icon": "/icons/forest/breath_of_fire.png"
+    "icon": "/icons/forest/breath_of_fire.jpg",
+    "description": "Одна из двух стихий твари теперь с Вами.",
+    "bonus": [
+      { "stat": "Strength", "value": 45 },
+      { "stat": "Defense", "value": 13 },
+      { "stat": "HPRegen", "value": 15 }
+    ],
+    "ability": "Способность \"Дыхание огня\"(Далность 400, 1400 урона + 150 урона в сек. в течении 5 сек.)"
+  },
+  {
+    "id": "breath_of_ice",
+    "name": "Дыхание льда",
+    "droppedBy": ["Бронзовая Химера"],
+    "icon": "/icons/forest/breath_of_ice.jpg",
+    "description": "Одна из двух стихий твари теперь с Вами.",
+    "bonus": [
+      { "stat": "Intelligence", "value": 45 },
+      { "stat": "Attack", "value": 75 },
+      { "stat": "MP", "value": 500 }
+    ],
+    "ability": "Способность \"Ледяное Дыхание\"(Далность 400, 1400 урона + 150 урона в сек. в течении 5 сек. и небольшая заморозка врагов)"
   },
   {
     "id": "staff_of_fauna",
@@ -42,7 +85,7 @@
   {
     "id": "essence_of_the_forest",
     "name": "Эссенция леса",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/forest/essence_of_the_forest.jpg"
   },
   {
     "id": "treasure_map",
@@ -73,8 +116,7 @@
       { "stat": "MP", "value": 120 },
       { "stat": "Intelligence", "value": 10 }
     ],
-    "droppedBy": ["Злобный Брат"],
-    "craftsInto": ["wolf_medal"]
+    "droppedBy": ["Boss Злобный Брат"]
   },
   {
     "id": "aborigine_horn",
@@ -85,8 +127,7 @@
       { "stat": "Attack", "value": 120 },
       { "stat": "Agility", "value": 10 }
     ],
-    "droppedBy": ["Злобный Брат"],
-    "craftsInto": ["bear_gloves", "sword_of_the_forest"]
+    "droppedBy": ["Злобный Брат"]
   },
   {
     "id": "orc_drum",
@@ -97,7 +138,170 @@
       { "stat": "HP", "value": 100 },
       { "stat": "Strength", "value": 10 }
     ],
-    "droppedBy": ["Злобный Брат"],
-    "craftsInto": ["white_sword", "steel_armor"]
+    "droppedBy": ["Boss Злобный Брат"]
+  },
+  {
+    "id": "giant_club",
+    "name": "Дубина великана",
+    "icon": "/icons/forest/giant_club.jpg",
+    "description": "Тяжелая, однако.",
+    "bonus": [
+      { "stat": "Parameters", "value": 27 },
+      { "stat": "Attack", "value": 33 }
+    ],
+    "droppedBy": ["Boss Камешек"]
+  },
+  {
+    "id": "not_for_weak",
+    "name": "Не для слабых",
+    "icon": "/icons/forest/not_for_weak.jpg",
+    "description": "Много здоровья не бывает",
+    "bonus": [
+      { "stat": "HP", "value": 300 },
+      { "stat": "Defense", "value": 10 }
+    ],
+    "droppedBy": ["Boss Камешек"]
+  },
+  {
+    "id": "tome",
+    "name": "Том",
+    "icon": "/icons/forest/tome.jpg",
+    "description": "Странный почерк.. и кто это писал?",
+    "bonus": [
+      { "stat": "MP", "value": 300 },
+      { "stat": "Attack", "value": 18 }
+    ],
+    "droppedBy": ["Boss Камешек"]
+  },
+  {
+    "id": "dark_arrow",
+    "name": "Темная стрела",
+    "icon": "/icons/forest/dark_arrow.jpg",
+    "description": "Наконечник чем-то измазан.",
+    "bonus": [
+      { "stat": "HP", "value": 200 },
+      { "stat": "Attack", "value": 33 }
+    ],
+    "droppedBy": ["Boss Камешек"]
+  },
+  {
+    "id": "forest_set_activator",
+    "name": "Активатор сета Леса",
+    "icon": "/icons/forest/forest_set_activator.jpg"
+  },
+  {
+    "id": "jewelry",
+    "name": "Украшение",
+    "icon": "/icons/forest/jewelry.jpg",
+    "description": "Немного колится, но носить можно...",
+    "bonus": [{ "stat": "Parameters", "value": 15 }],
+    "droppedBy": ["Boss Хранитель Леса"]
+  },
+  {
+    "id": "ice_ring",
+    "name": "Ледяное Кольцо",
+    "icon": "/icons/forest/ice_ring.jpg",
+    "description": "Никто не знает, где Хранитель роздобыл это колечко",
+    "bonus": [
+      { "stat": "MP", "value": 120 },
+      { "stat": "Intelligence", "value": 20 }
+    ],
+    "droppedBy": ["Boss Хранитель Леса"]
+  },
+  {
+    "id": "little_lizard",
+    "name": "Маленькая ящерица",
+    "icon": "/icons/forest/little_lizard.jpg",
+    "description": "Немного колится, но носить можно...",
+    "bonus": [
+      { "stat": "HP", "value": 70 },
+      { "stat": "Defense", "value": 8 },
+      { "stat": "AS", "value": "15%" }
+    ],
+    "droppedBy": ["Boss Хранитель Леса"]
+  },
+  {
+    "id": "banal_gloves",
+    "name": "Банальные Перчи",
+    "icon": "/icons/forest/banal_gloves.jpg",
+    "description": "Ничего особенного",
+    "bonus": [
+      { "stat": "Agility", "value": 25 },
+      { "stat": "Attack", "value": 15 },
+      { "stat": "AS", "value": "15%" }
+    ],
+    "droppedBy": ["Boss Мертвое Отродье"]
+  },
+  {
+    "id": "rough_gloves",
+    "name": "Грубые Перчи",
+    "icon": "/icons/forest/rough_gloves.jpg",
+    "description": "В таких только огороды копать да камни таскать.",
+    "bonus": [
+      { "stat": "HP", "value": 70 },
+      { "stat": "Strength", "value": 25 },
+      { "stat": "Defense", "value": 8 }
+    ],
+    "droppedBy": ["Boss Мертвое Отродье"]
+  },
+  {
+    "id": "sword_of_agility",
+    "name": "Меч Ловкости",
+    "icon": "/icons/forest/sword_of_agility.jpg"
+  },
+  {
+    "id": "helmet",
+    "name": "Шлем",
+    "icon": "/icons/forest/helmet.jpg"
+  },
+  {
+    "id": "shield_of_warrior",
+    "name": "Щит воина",
+    "icon": "/icons/forest/shield_of_warrior.jpg"
+  },
+  {
+    "id": "basic_claws",
+    "name": "Обычные когти",
+    "icon": "/icons/forest/basic_claws.jpg"
+  },
+  {
+    "id": "orb_of_light",
+    "name": "Сфера Света",
+    "icon": "/icons/forest/orb_of_light.jpg"
+  },
+  {
+    "id": "vampire_mask",
+    "name": "Маска вампира",
+    "icon": "/icons/forest/vampire_mask.jpg"
+  },
+  {
+    "id": "magician_dagger",
+    "name": "Кинжал мага",
+    "icon": "/icons/forest/magician_dagger.jpg"
+  },
+  {
+    "id": "urn",
+    "name": "Урна",
+    "icon": "/icons/forest/urn.jpg"
+  },
+  {
+    "id": "ring_of_power",
+    "name": "Кольцо мощи",
+    "icon": "/icons/forest/ring_of_power.jpg"
+  },
+  {
+    "id": "book_of_shaman",
+    "name": "Книга Шамана",
+    "icon": "/icons/forest/book_of_shaman.jpg"
+  },
+  {
+    "id": "claws",
+    "name": "Коготки",
+    "icon": "/icons/forest/claws.jpg"
+  },
+  {
+    "id": "lukes_heart",
+    "name": "Сердце Люка",
+    "icon": "/icons/forest/lukes_heart.jpg"
   }
 ]

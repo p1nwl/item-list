@@ -54,7 +54,7 @@
       "goldRange": [20, 100],
       "markRange": [2, 10],
       "xpRange": [40, 100],
-      "dropItemId": "engineer-part"
+      "dropItemId": "common-engineer-part"
     },
     "icon": "/icons/other/trash.jpg"
   },
@@ -68,7 +68,7 @@
       "goldRange": [25, 150],
       "markRange": [3, 15],
       "xpRange": [50, 110],
-      "dropItemId": "engineer-part"
+      "dropItemId": "uncommon-engineer-part"
     },
     "icon": "/icons/other/trash.jpg"
   },
@@ -82,7 +82,7 @@
       "goldRange": [30, 170],
       "markRange": [4, 20],
       "xpRange": [60, 130],
-      "dropItemId": "engineer-part"
+      "dropItemId": "rare-engineer-part"
     },
     "icon": "/icons/other/trash.jpg"
   },
@@ -96,7 +96,7 @@
       "goldRange": [35, 200],
       "markRange": [5, 30],
       "xpRange": [80, 150],
-      "dropItemId": "engineer-part"
+      "dropItemId": "useful-engineer-part"
     },
     "icon": "/icons/other/trash.jpg"
   },
@@ -110,7 +110,7 @@
       "goldRange": [50, 290],
       "markRange": [10, 33],
       "xpRange": [100, 180],
-      "dropItemId": "engineer-part"
+      "dropItemId": "valuable-engineer-part"
     },
     "icon": "/icons/other/trash.jpg"
   },
@@ -124,8 +124,38 @@
       "goldRange": [100, 300],
       "markRange": [14, 34],
       "xpRange": [130, 200],
-      "dropItemId": "engineer-part"
+      "dropItemId": "high-value-engineer-part"
     },
     "icon": "/icons/other/trash.jpg"
+  },
+  {
+    "id": "common-engineer-part",
+    "name": "Обычная деталь инженера",
+    "icon": "/icons/other/engineer_part.jpg"
+  },
+  {
+    "id": "uncommon-engineer-part",
+    "name": "Необычная деталь инженера",
+    "icon": "/icons/other/engineer_part.jpg"
+  },
+  {
+    "id": "rare-engineer-part",
+    "name": "Редкая деталь инженера",
+    "icon": "/icons/other/engineer_part.jpg"
+  },
+  {
+    "id": "useful-engineer-part",
+    "name": "Полезная деталь инженера",
+    "icon": "/icons/other/engineer_part.jpg"
+  },
+  {
+    "id": "valuable-engineer-part",
+    "name": "Ценная деталь инженера",
+    "icon": "/icons/other/engineer_part.jpg"
+  },
+  {
+    "id": "high-value-engineer-part",
+    "name": "Очень ценная деталь",
+    "icon": "/icons/other/engineer_part.jpg"
   }
 ]

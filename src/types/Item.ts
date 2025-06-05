@@ -20,4 +20,8 @@ export interface Item {
     stat: string;
     value: number;
   }[];
+  ability?: string;
+  attention?: string;
+  additionalInfo?: string[];
+  additionalInfoTitle?: string;
 }
