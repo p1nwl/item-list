@@ -43,7 +43,11 @@
     "droppedBy": ["Бронзовая Химера"],
     "icon": "/icons/forest/fury.jpg",
     "description": "Не только красивый вид, но и классное применение.",
-    "bonus": [{ "stat": "Agility", "value": 45 }, { "stat": "Damage" }, {}],
+    "bonus": [
+      { "stat": "Agility", "value": 45 },
+      { "stat": "Damage", "value": 75 },
+      { "stat": "AS", "value": 15, "percent": true }
+    ],
     "ability": "Способность \"Стремительность\"(Длительность 20 сек., +30% MS, кд - 25 сек., урон +1500 ед.)"
   },
   {
@@ -127,7 +131,7 @@
       { "stat": "Attack", "value": 120 },
       { "stat": "Agility", "value": 10 }
     ],
-    "droppedBy": ["Злобный Брат"]
+    "droppedBy": ["Boss Злобный Брат"]
   },
   {
     "id": "orc_drum",
@@ -187,7 +191,9 @@
   {
     "id": "forest_set_activator",
     "name": "Активатор сета Леса",
-    "icon": "/icons/forest/forest_set_activator.jpg"
+    "icon": "/icons/forest/forest_set_activator.jpg",
+    "droppedBy": ["Boss Хранитель Леса"],
+    "description": "Активирует Сет Леса."
   },
   {
     "id": "jewelry",
@@ -216,7 +222,7 @@
     "bonus": [
       { "stat": "HP", "value": 70 },
       { "stat": "Defense", "value": 8 },
-      { "stat": "AS", "value": "15%" }
+      { "stat": "AS", "value": 15, "percent": true }
     ],
     "droppedBy": ["Boss Хранитель Леса"]
   },
@@ -228,7 +234,7 @@
     "bonus": [
       { "stat": "Agility", "value": 25 },
       { "stat": "Attack", "value": 15 },
-      { "stat": "AS", "value": "15%" }
+      { "stat": "AS", "value": 15, "percent": true }
     ],
     "droppedBy": ["Boss Мертвое Отродье"]
   },
@@ -247,61 +253,191 @@
   {
     "id": "sword_of_agility",
     "name": "Меч Ловкости",
-    "icon": "/icons/forest/sword_of_agility.jpg"
+    "icon": "/icons/forest/sword_of_agility.jpg",
+    "description": "Это оружие хоть и не очень сильное, но на герое смотрится хорошо",
+    "bonus": [
+      { "stat": "Agility", "value": 8 },
+      { "stat": "AS", "value": 3, "percent": true }
+    ],
+    "droppedBy": ["Мобы 1 уровня"]
   },
   {
     "id": "helmet",
     "name": "Шлем",
-    "icon": "/icons/forest/helmet.jpg"
+    "icon": "/icons/forest/helmet.jpg",
+    "description": "Шлем, в сплав которого входит обычный алюминий",
+    "bonus": [
+      { "stat": "Agility", "value": 8 },
+      { "stat": "Defense", "value": 3 }
+    ],
+    "droppedBy": ["Мобы 1 уровня"]
   },
   {
     "id": "shield_of_warrior",
     "name": "Щит воина",
-    "icon": "/icons/forest/shield_of_warrior.jpg"
+    "icon": "/icons/forest/shield_of_warrior.jpg",
+    "description": "Щит настоящего бойца",
+    "bonus": [
+      { "stat": "Strength", "value": 8 },
+      { "stat": "Defense", "value": 3 }
+    ],
+    "droppedBy": ["Мобы 1 уровня"]
   },
   {
     "id": "basic_claws",
     "name": "Обычные когти",
-    "icon": "/icons/forest/basic_claws.jpg"
+    "icon": "/icons/forest/basic_claws.jpg",
+    "description": "Коготки, сделанные из обычного металла. Качество паршивое, но на пару схваток должно хватить",
+    "bonus": [
+      { "stat": "Attack", "value": 10 },
+      { "stat": "AS", "value": 3, "percent": true }
+    ],
+    "droppedBy": ["Мобы 1 уровня"]
   },
   {
     "id": "orb_of_light",
     "name": "Сфера Света",
-    "icon": "/icons/forest/orb_of_light.jpg"
+    "icon": "/icons/forest/orb_of_light.jpg",
+    "description": "Сфера, которая немного повышает выживаемость героя",
+    "bonus": [
+      { "stat": "HP", "value": 70 },
+      { "stat": "MP", "value": 50 }
+    ],
+    "droppedBy": ["Мобы 1 уровня"]
   },
   {
     "id": "vampire_mask",
     "name": "Маска вампира",
-    "icon": "/icons/forest/vampire_mask.jpg"
+    "icon": "/icons/forest/vampire_mask.jpg",
+    "description": "Маска когда-то давала вампиризм, но сейчас почти бесполезна",
+    "bonus": [
+      { "stat": "Agility", "value": 8 },
+      { "stat": "Strength", "value": 8 }
+    ],
+    "droppedBy": ["Мобы 1 уровня"]
   },
   {
     "id": "magician_dagger",
     "name": "Кинжал мага",
-    "icon": "/icons/forest/magician_dagger.jpg"
+    "icon": "/icons/forest/magician_dagger.jpg",
+    "description": "Оружие многих магов и великих воинов",
+    "bonus": [
+      { "stat": "Agility", "value": 8 },
+      { "stat": "Intelligence", "value": 8 }
+    ],
+    "droppedBy": ["Мобы 1 уровня"]
   },
   {
     "id": "urn",
     "name": "Урна",
-    "icon": "/icons/forest/urn.jpg"
+    "icon": "/icons/forest/urn.jpg",
+    "description": "Урна погибшего Короля Альянса",
+    "bonus": [
+      { "stat": "Strength", "value": 8 },
+      { "stat": "Intelligence", "value": 8 }
+    ],
+    "droppedBy": ["Мобы 1 уровня"]
   },
   {
     "id": "ring_of_power",
     "name": "Кольцо мощи",
-    "icon": "/icons/forest/ring_of_power.jpg"
+    "icon": "/icons/forest/ring_of_power.jpg",
+    "description": "Кольцо, делающее его владельца немного сильнее.",
+    "bonus": [{ "stat": "Parameters", "value": 5 }],
+    "droppedBy": ["Мобы 1 уровня"]
   },
   {
     "id": "book_of_shaman",
     "name": "Книга Шамана",
-    "icon": "/icons/forest/book_of_shaman.jpg"
+    "icon": "/icons/forest/book_of_shaman.jpg",
+    "description": "Том интересной магии",
+    "bonus": [
+      { "stat": "Intelligence", "value": 8 },
+      { "stat": "MP", "value": 50 }
+    ],
+    "droppedBy": ["Мобы 1 уровня"]
   },
   {
     "id": "claws",
     "name": "Коготки",
-    "icon": "/icons/forest/claws.jpg"
+    "icon": "/icons/forest/claws.jpg",
+    "description": "Когти дикого зверя",
+    "droppedBy": ["Мобы 1 уровня"],
+    "additionalInfoTitle": "Можно приобрести после выполнения квеста \"Браконьеры\" у квестодателя"
   },
   {
     "id": "lukes_heart",
     "name": "Сердце Люка",
-    "icon": "/icons/forest/lukes_heart.jpg"
+    "icon": "/icons/forest/lukes_heart.jpg",
+    "description": "Активирует Сет Люка"
+  },
+  {
+    "id": "sword_of_forest",
+    "name": "Меч Леса",
+    "icon": "/icons/forest/sword_of_forest.png",
+    "description": "2 часть Сета Леса",
+    "bonus": [
+      { "stat": "Attack", "value": 33 },
+      { "stat": "Parameters", "value": 22 },
+      { "stat": "AS", "value": 20, "percent": true }
+    ],
+    "components": [
+      "sword_of_forest_recipe",
+      "banal_gloves",
+      "aborigine_horn",
+      "jewelry"
+    ]
+  },
+  {
+    "id": "sword_of_forest_recipe",
+    "name": "Меч Леса (рецепт)",
+    "icon": "/icons/guldan_recipe.png",
+    "droppedBy": ["Boss Red Mob"]
+  },
+  {
+    "id": "helm_of_forest",
+    "name": "Шлем Леса",
+    "icon": "/icons/forest/helm_of_forest.png",
+    "description": "1 часть Сета Леса",
+    "bonus": [
+      { "stat": "Parameters", "value": 20 },
+      { "stat": "Attack", "value": 15 },
+      { "stat": "HP", "value": 100 },
+      { "stat": "MP", "value": 70 }
+    ],
+    "components": [
+      "helm_of_forest_recipe",
+      "magician_dagger",
+      "vampire_mask",
+      "urn",
+      "orb_of_light"
+    ]
+  },
+  {
+    "id": "helm_of_forest_recipe",
+    "name": "Шлем Леса (рецепт)",
+    "icon": "/icons/guldan_recipe.png",
+    "droppedBy": ["Boss Blue Mob"]
+  },
+  {
+    "id": "bandit_breastplate",
+    "name": "Нагрудник Разбойника",
+    "icon": "/icons/forest/bandit_breastplate.jpg",
+    "description": "Решили стать великим убийцей? Тогда эта броня для Вас!",
+    "bonus": [
+      { "stat": "Agility", "value": 30 },
+      { "stat": "Strength", "value": 15 },
+      { "stat": "Intelligence", "value": 15 },
+      { "stat": "HP", "value": 100 },
+      { "stat": "MP", "value": 120 }
+    ],
+    "droppedBy": ["Boss Разрушитель Природы Easy"]
+  },
+  {
+    "id": "soul_of_destroyer",
+    "name": "Душа Разрушителя",
+    "icon": "/icons/forest/soul_of_destroyer.jpg",
+    "description": "Самое сокровенное древнего воина дремучих лесов.",
+    "droppedBy": ["Boss Разрушитель Природы Easy"]
   }
 ]

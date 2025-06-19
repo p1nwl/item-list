@@ -22,6 +22,9 @@ const statNames: Record<string, string> = {
   Attack: "атаки",
   Parameters: "к параметрам",
   MDef: "защиты от магии",
+  AbilityCritChance: "к шансу крита навыками",
+  AbilityCritDamage: "к критическому урону навыками",
+  AllExtracts: "ко всем Экстрактам",
 };
 
 const ItemDetail = ({ item, items, onBack, onSelectItem }: Props) => {
@@ -128,7 +131,7 @@ const ItemDetail = ({ item, items, onBack, onSelectItem }: Props) => {
         <img
           src={item.icon || "/icons/placeholder.png"}
           alt={item.name}
-          className="w-16 h-16 object-contain"
+          className="w-16 h-16 object-contain self-start mt-2"
         />
         <div>
           <h2 className="text-2xl font-bold">{item.name}</h2>
@@ -141,17 +144,25 @@ const ItemDetail = ({ item, items, onBack, onSelectItem }: Props) => {
           {/* Отображение бонусов */}
           {item.bonus && item.bonus.length > 0 && (
             <div className="mt-2">
-              {item.bonus.map((b, idx) =>
-                b.value > 0 ? (
-                  <p key={idx} className="text-green-600 font-bold">
-                    +{b.value} {statNames[b.stat] || b.stat}
+              {item.bonus.map((b, idx) => {
+                const isPositive = b.value > 0;
+                const classes = isPositive
+                  ? "text-green-600 font-bold"
+                  : b.value < 0
+                  ? "text-red-600 font-semibold"
+                  : "text-gray-600";
+
+                const display = `${isPositive ? "+" : ""}${b.value}${
+                  b.percent ? "%" : ""
+                }`;
+
+                return (
+                  <p key={idx} className={classes}>
+                    {display} {statNames[b.stat] ?? b.stat}
                   </p>
-                ) : (
-                  <p key={idx} className="text-red-600 font-semibold">
-                    {b.value} {statNames[b.stat] || b.stat}
-                  </p>
-                )
-              )}
+                );
+              })}
+
               {item.ability && (
                 <p className="text-blue-500 font-semibold">{item.ability}</p>
               )}

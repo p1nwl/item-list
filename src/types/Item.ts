@@ -19,6 +19,7 @@ export interface Item {
   bonus?: {
     stat: string;
     value: number;
+    percent?: boolean;
   }[];
   ability?: string;
   attention?: string;

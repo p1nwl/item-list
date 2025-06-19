@@ -32,6 +32,11 @@ const ItemCraftTree = ({ item, allItems, onSelectItem }: Props) => {
 
     const isExpandable = children.length > 0;
     const isExpanded = expandedIds.has(item.id);
+    const source = item.droppedBy?.length
+      ? { label: "Падает с:", value: item.droppedBy.join(", ") }
+      : item.boughtFrom
+      ? { label: "Продаётся у:", value: item.boughtFrom }
+      : null;
 
     return (
       <div
@@ -81,10 +86,10 @@ const ItemCraftTree = ({ item, allItems, onSelectItem }: Props) => {
             )}
           </div>
 
-          {/* Новая секция: источники дропа */}
-          {item.droppedBy && item.droppedBy.length > 0 && (
+          {/* Источники дропа */}
+          {source && (
             <p className="text-sm text-gray-600 ml-12">
-              <strong>Падает с:</strong> {item.droppedBy.join(", ")}
+              <strong>{source.label}</strong> {source.value}
             </p>
           )}
         </div>

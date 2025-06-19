@@ -162,7 +162,7 @@
     "id": "rainbow_stone_recipe",
     "name": "Радужный камень (рецепт)",
     "icon": "/icons/hearthstone_recipe.png",
-    "droppedBy": ["Boss Тессеракт"]
+    "droppedBy": ["Boss Тессеракт (Арена)"]
   },
   {
     "id": "obsidian",

@@ -7,7 +7,10 @@
   {
     "id": "soul_of_kai_in_blood",
     "name": "Душа Кая в крови",
-    "icon": "/icons/dummy.png"
+    "icon": "/icons/archipelago/soul_of_kai_in_blood.png"
+  },
+  {
+    "id": "essence_of_dummy.png"
   },
   {
     "id": "essence_of_crustacean",
