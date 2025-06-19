@@ -3,5 +3,34 @@
     "id": "knight_move",
     "name": "Ход конём",
     "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "elemental_ingot",
+    "name": "Элементальный слиток",
+    "icon": "/icons/stones/elemental_ingot.png",
+    "components": [
+      "armor_of_scum",
+      "eclipse",
+      "rainbow_stone",
+      "elemental_ingot_recipe"
+    ]
+  },
+  {
+    "id": "elemental_ingot_recipe",
+    "name": "Элементальный слиток (рецепт)",
+    "icon": "/icons/hearthstone_recipe.png",
+    "droppedBy": ["Boss Глава Новогоднего Корпоратива Easy"]
+  },
+  {
+    "id": "rainbow_stone",
+    "name": "Радужный камень",
+    "icon": "/icons/stones/rainbow_stone.png",
+    "components": ["ruby", "sapphire", "obsidian", "rainbow_stone_recipe"]
+  },
+  {
+    "id": "sapphire",
+    "name": "Сапфир",
+    "icon": "/icons/stones/sapphire.png",
+    "additionalInfoTitle": "Чтобы получить Сапфир - необходимо выполнить квест \"Черный список\""
   }
 ]

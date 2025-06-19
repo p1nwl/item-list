@@ -23,5 +23,5 @@ export interface Item {
   ability?: string;
   attention?: string;
   additionalInfo?: string[];
-  additionalInfoTitle?: string;
+  additionalInfoTitle?: string[];
 }

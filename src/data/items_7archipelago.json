@@ -63,5 +63,17 @@
     "id": "staff_of_the_dead",
     "name": "Посох смертника",
     "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "eclipse",
+    "name": "Затмение",
+    "icon": "/icons/archipelago/eclipse.png",
+    "droppedBy": ["Boss Ахил"]
+  },
+  {
+    "id": "ruby",
+    "name": "Рубин",
+    "icon": "/icons/stones/ruby.png",
+    "additionalInfoTitle": "Чтобы получить Рубин - необходимо выполнить квест \"Черный список\""
   }
 ]

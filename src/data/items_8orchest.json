@@ -108,12 +108,16 @@
   {
     "id": "magical_amulet_es",
     "name": "Магический оберег(Э.С)",
-    "icon": "/icons/orchest/magical_amulet.png"
-  },
-  {
-    "id": "armor_of_frost",
-    "name": "Броня Мрази",
-    "icon": "/icons/orchest/dummy.png"
+    "icon": "/icons/orchest/magical_amulet.png",
+    "components": ["magical_amulet_3", "elemental_ingot"],
+    "additionalInfoTitle": [
+      "Чтобы сделать Магический оберег(Э.С) нужно вставить в него ",
+      {
+        "text": "Элементальный слиток",
+        "refId": "elemental_ingot"
+      },
+      "."
+    ]
   },
   {
     "id": "rotten_carcass",
@@ -168,7 +172,7 @@
   {
     "id": "kyanite",
     "name": "Кианит",
-    "icon": "/icons/orchest/dummy.png"
+    "icon": "/icons/stones/kyanite.png"
   },
   {
     "id": "carnival_mask_recipe",
@@ -230,5 +234,11 @@
     "name": "Гнилой череп",
     "icon": "/icons/dummy.png",
     "droppedBy": ["Boss Асмодеус"]
+  },
+  {
+    "id": "armor_of_scum",
+    "name": "Броня Мрази",
+    "icon": "/icons/orchest/armor_of_scum.png",
+    "droppedBy": ["Boss Мазарэль"]
   }
 ]

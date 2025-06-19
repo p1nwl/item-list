@@ -71,7 +71,7 @@ export const trophyUpgradeRecipes: string[][] = [
   ["phoenix", "only_in_dreams", "soul_ache", "essence_of_crustacean"],
   //улучшение трофея до уровня 19
   [
-    "armor_of_frost",
+    "armor_of_scum",
     "rotten_carcass",
     "brightness_3",
     "flight_of_thought_3",

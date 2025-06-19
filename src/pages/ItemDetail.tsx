@@ -141,11 +141,17 @@ const ItemDetail = ({ item, items, onBack, onSelectItem }: Props) => {
           {/* Отображение бонусов */}
           {item.bonus && item.bonus.length > 0 && (
             <div className="mt-2">
-              {item.bonus.map((b, idx) => (
-                <p key={idx} className="text-red-500 font-semibold">
-                  +{b.value} {statNames[b.stat] || b.stat}
-                </p>
-              ))}
+              {item.bonus.map((b, idx) =>
+                b.value > 0 ? (
+                  <p key={idx} className="text-green-600 font-bold">
+                    +{b.value} {statNames[b.stat] || b.stat}
+                  </p>
+                ) : (
+                  <p key={idx} className="text-red-600 font-semibold">
+                    {b.value} {statNames[b.stat] || b.stat}
+                  </p>
+                )
+              )}
               {item.ability && (
                 <p className="text-blue-500 font-semibold">{item.ability}</p>
               )}
@@ -154,20 +160,38 @@ const ItemDetail = ({ item, items, onBack, onSelectItem }: Props) => {
         </div>
       </div>
 
-      {item.additionalInfoTitle &&
-        Array.isArray(item.additionalInfo) &&
-        item.additionalInfo.length > 0 && (
-          <div className="mb-6">
-            <h2 className="text-lg font-medium mb-2">
-              {item.additionalInfoTitle}
-            </h2>
-            <ol className="list-decimal pl-5 space-y-1">
-              {item.additionalInfo.map((text, idx) => (
-                <li key={idx}>{text}</li>
-              ))}
-            </ol>
-          </div>
-        )}
+      {/* Дополнительная информация по предметам */}
+      {item.additionalInfoTitle && (
+        <div className="mb-6">
+          <h2 className="text-lg font-medium mb-2">
+            {Array.isArray(item.additionalInfoTitle)
+              ? item.additionalInfoTitle.map(
+                  (part: string | { text: string; refId: string }, i) =>
+                    typeof part === "string" ? (
+                      part
+                    ) : (
+                      <a
+                        key={i}
+                        href={`/item/${part.refId}`}
+                        className="text-blue-500 underline"
+                      >
+                        {part.text}
+                      </a>
+                    )
+                )
+              : item.additionalInfoTitle}
+          </h2>
+
+          {Array.isArray(item.additionalInfo) &&
+            item.additionalInfo.length > 0 && (
+              <ol className="list-decimal pl-5 space-y-1">
+                {item.additionalInfo.map((text, idx) => (
+                  <li key={idx}>{text}</li>
+                ))}
+              </ol>
+            )}
+        </div>
+      )}
 
       {/* Где продаётся */}
       {item.boughtFrom && (

@@ -2,7 +2,7 @@
   {
     "id": "ice_shard",
     "name": "Осколок льда",
-    "icon": "/icons/other/dummy.png"
+    "icon": "/icons/other/ice_shard.png"
   },
   {
     "id": "dark_claw_of_prime",
@@ -157,5 +157,29 @@
     "id": "high-value-engineer-part",
     "name": "Очень ценная деталь",
     "icon": "/icons/other/engineer_part.jpg"
+  },
+  {
+    "id": "rainbow_stone_recipe",
+    "name": "Радужный камень (рецепт)",
+    "icon": "/icons/hearthstone_recipe.png",
+    "droppedBy": ["Boss Тессеракт"]
+  },
+  {
+    "id": "obsidian",
+    "name": "Обсидиан",
+    "icon": "/icons/stones/obsidian.png",
+    "additionalInfoTitle": "Существует несколько способов получить Обсидиан:",
+    "additionalInfo": [
+      "Собрать 30 кусочков Обсидиана на карте",
+      "Сделать достижение \"Искатель сокровищ\"",
+      "Купить в магазине Кактуса в Пустошах(открывается после получения достижения \"Повелитель снега\",\"Мы не захлебнёмся\",\"Повелитель песка\")",
+      "Также можно случайным образом получить из Стальных сундуков"
+    ]
+  },
+  {
+    "id": "cursed_obsidian",
+    "name": "Проклятый обсидиан",
+    "icon": "/icons/stones/cursed_obsidian.png",
+    "components": ["obsidian", "bark"]
   }
 ]
