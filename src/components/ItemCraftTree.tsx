@@ -45,7 +45,7 @@ const ItemCraftTree = ({ item, allItems, onSelectItem }: Props) => {
         className="mt-2"
       >
         <div className="flex flex-col gap-1">
-          <div className="flex items-center justify-between gap-2 pr-2">
+          <div className="flex items-center gap-2 pr-2">
             <div
               className="flex items-center gap-2 cursor-pointer"
               onClick={() => onSelectItem(item)}
@@ -86,7 +86,6 @@ const ItemCraftTree = ({ item, allItems, onSelectItem }: Props) => {
             )}
           </div>
 
-          {/* Источники дропа */}
           {source && (
             <p className="text-sm text-gray-600 ml-12">
               <strong>{source.label}</strong> {source.value}
@@ -97,12 +96,11 @@ const ItemCraftTree = ({ item, allItems, onSelectItem }: Props) => {
         <div
           style={{
             maxHeight: isExpanded ? 500 : 0,
-            overflow: "hidden",
             transition: "max-height 0.3s ease",
           }}
         >
           {isExpanded && (
-            <div className="flex gap-2">
+            <div className="flex gap-2 border-t-1">
               {children.map((child) => renderTree(child, level + 1))}
             </div>
           )}

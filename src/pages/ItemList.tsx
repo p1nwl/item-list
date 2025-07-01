@@ -49,7 +49,7 @@ const ItemList = () => {
   }, [items, search, dropFilter, componentFilter, sortBy]);
 
   return (
-    <div className="p-4 max-w-5xl mx-auto">
+    <div className="p-1 max-w-5xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Список предметов</h1>
 
       <ItemFilters
@@ -69,7 +69,7 @@ const ItemList = () => {
             filtered.map((item) => (
               <div
                 key={item.id}
-                className="p-4 border rounded shadow flex items-center gap-4 cursor-pointer hover:bg-gray-100 transition"
+                className="p-4 border rounded shadow flex items-center gap-4 cursor-pointer hover:bg-gray-300 hover:text-gray-700 transition"
                 onClick={() => navigate(`/item/${item.id}`)}
               >
                 <img
