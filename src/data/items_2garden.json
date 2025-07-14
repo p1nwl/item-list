@@ -62,7 +62,7 @@
   {
     "id": "soul_of_spider_in_blood",
     "name": "Душа Матери Пауков в крови",
-    "icon": "/icons/soulf_of_spider_in_blood.png",
+    "icon": "/icons/garden/soulf_of_spider_in_blood.png",
     "droppedBy": ["Boss Матерь Пауков Blood Raid"]
   },
   {

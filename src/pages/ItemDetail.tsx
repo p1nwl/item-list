@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import type { Item } from "../types/Item";
 import ItemCraftTree from "../components/ItemCraftTree";
 
@@ -27,9 +26,7 @@ const statNames: Record<string, string> = {
   AllExtracts: "ко всем Экстрактам",
 };
 
-const ItemDetail = ({ item, items, onBack, onSelectItem }: Props) => {
-  const navigate = useNavigate();
-
+const ItemDetail = ({ item, items, onSelectItem }: Props) => {
   const resolveItem = (id: string) => items.find((i) => i.id === id);
   {
     /* Отрисовка мусора */
@@ -39,21 +36,6 @@ const ItemDetail = ({ item, items, onBack, onSelectItem }: Props) => {
 
     return (
       <div className="p-4 pt-0 mx-auto">
-        <div className="flex gap-2 mb-4 mt-0">
-          <button
-            onClick={onBack}
-            className="text-blue-600 hover:underline text-sm"
-          >
-            ← Назад
-          </button>
-          <button
-            onClick={() => navigate("/")}
-            className="text-blue-600 hover:underline text-sm"
-          >
-            ⌂ На главную
-          </button>
-        </div>
-
         <div className="flex items-center gap-4 mb-4">
           <img
             src={item.icon || "/icons/placeholder.png"}
@@ -77,7 +59,7 @@ const ItemDetail = ({ item, items, onBack, onSelectItem }: Props) => {
           </div>
         )}
 
-        <div className="text-sm mt-2 border-4 border-yellow-300 p-4 rounded-lg bg-yellow-50 inline-block">
+        <div className="text-sm mt-2 border-4 border-yellow-300 p-4 rounded-lg bg-yellow-50 inline-block text-gray-900">
           <p className="mb-1 font-bold">Награда: </p>
           <p className="font-bold text-yellow-600">
             {item.trashInfo.goldRange[0]}–{item.trashInfo.goldRange[1]} золота *
@@ -110,22 +92,6 @@ const ItemDetail = ({ item, items, onBack, onSelectItem }: Props) => {
 
   return (
     <div className="p-4 pt-0 mx-auto">
-      {/* Кнопки "Назад" и "На главную" */}
-      <div className="flex gap-2 mb-4 mt-0">
-        <button
-          onClick={onBack}
-          className="text-blue-600 hover:underline text-sm"
-        >
-          ← Назад
-        </button>
-        <button
-          onClick={() => navigate("/")}
-          className="text-blue-600 hover:underline text-sm"
-        >
-          ⌂ На главную
-        </button>
-      </div>
-
       {/* Заголовок и иконка */}
       <div className="flex items-center gap-4 mb-4">
         <img

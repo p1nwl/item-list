@@ -1,8 +1,13 @@
 /* eslint-disable react-refresh/only-export-components */
-
-import { createContext, useEffect, useState, type ReactNode } from "react";
+import {
+  createContext,
+  useEffect,
+  useState,
+  type ReactNode,
+  useCallback,
+} from "react";
 import { supabase } from "../lib/supabaseClient";
-import type { User, Session } from "@supabase/supabase-js";
+import type { User, AuthChangeEvent, Session } from "@supabase/supabase-js";
 
 type Provider = "google" | "github" | "discord";
 
@@ -17,9 +22,13 @@ interface AuthContextValue {
   user: User | null;
   profile: Profile | null;
   loading: boolean;
-  signInWithPassword: (e: string, p: string) => Promise<void>;
-  signUpWithPassword: (e: string, p: string, name: string) => Promise<void>;
-  signInWithProvider: (p: Provider) => void;
+  signInWithPassword: (email: string, password: string) => Promise<void>;
+  signUpWithPassword: (
+    email: string,
+    password: string,
+    name: string
+  ) => Promise<void>;
+  signInWithProvider: (p: Provider) => Promise<void>;
   signOut: () => Promise<void>;
 }
 
@@ -32,52 +41,62 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [profile, setProfile] = useState<Profile | null>(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    supabase.auth.getSession().then(async ({ data }) => {
-      const u = data.session?.user ?? null;
-      setUser(u);
-      setLoading(false);
-      if (u) {
-        const { data: prof } = await supabase
-          .from("profiles")
-          .select("*")
-          .eq("id", u.id)
-          .single();
-        setProfile(prof as Profile);
-      }
-    });
+  const fetchProfile = useCallback(async (u: User) => {
+    const { data: prof, error } = await supabase
+      .from("profiles")
+      .select("*")
+      .eq("id", u.id)
+      .maybeSingle();
+
+    if (error) console.error("fetchProfile error", error);
+    setProfile(prof as Profile | null);
   }, []);
 
   useEffect(() => {
-    const { data: listener } = supabase.auth.onAuthStateChange(
-      async (_event, session: Session | null) => {
+    (async () => {
+      const { data } = await supabase.auth.getSession();
+      const u = data.session?.user ?? null;
+      setUser(u);
+      if (u) await fetchProfile(u);
+      setLoading(false);
+    })();
+  }, [fetchProfile]);
+
+  useEffect(() => {
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange(
+      async (event: AuthChangeEvent, session: Session | null) => {
+        console.log("[AuthEvent]", event);
+
         const u = session?.user ?? null;
         setUser(u);
 
-        if (u) {
-          const dm =
-            u.user_metadata.display_name ||
-            u.user_metadata.full_name ||
-            u.user_metadata.user_name ||
-            u.email;
-
-          const { data: saved } = await supabase
-            .from("profiles")
-            .upsert({ id: u.id, display_name: dm })
-            .select()
-            .single();
-
-          setProfile(saved as Profile);
-        } else {
+        if (event !== "SIGNED_IN" && event !== "TOKEN_REFRESHED") {
           setProfile(null);
+          return;
         }
+        if (!u) return;
+
+        const displayName =
+          u.user_metadata.display_name ??
+          u.user_metadata.full_name ??
+          u.user_metadata.user_name ??
+          u.email;
+
+        const { data: saved, error } = await supabase
+          .from("profiles")
+          .upsert({ id: u.id, display_name: displayName })
+          .select()
+          .maybeSingle();
+
+        if (error) console.error("profiles upsert/select error", error);
+        setProfile(saved as Profile | null);
       }
     );
 
-    return () => {
-      listener.subscription.unsubscribe();
-    };
-  }, []);
+    return () => subscription.unsubscribe();
+  }, [fetchProfile]);
 
   const signInWithPassword = async (email: string, password: string) => {
     const { error } = await supabase.auth.signInWithPassword({
@@ -100,14 +119,19 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     if (error) throw error;
   };
 
-  const signInWithProvider = (provider: Provider) =>
-    supabase.auth.signInWithOAuth({ provider }).catch(console.error);
-
-  const signOut = async () => {
-    const { error } = await supabase.auth.signOut();
+  const signInWithProvider = async (provider: Provider) => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider,
+      options: { redirectTo: `${window.location.origin}/auth/callback` },
+    });
     if (error) throw error;
   };
 
+  const signOut = async () => {
+    console.log("Signing out…");
+    const { error } = await supabase.auth.signOut();
+    if (error) throw error;
+  };
   return (
     <AuthContext.Provider
       value={{

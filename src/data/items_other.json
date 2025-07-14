@@ -131,32 +131,32 @@
   {
     "id": "common-engineer-part",
     "name": "Обычная деталь инженера",
-    "icon": "/icons/other/engineer_part.jpg"
+    "icon": "/icons/other/engineer_part.png"
   },
   {
     "id": "uncommon-engineer-part",
     "name": "Необычная деталь инженера",
-    "icon": "/icons/other/engineer_part.jpg"
+    "icon": "/icons/other/engineer_part.png"
   },
   {
     "id": "rare-engineer-part",
     "name": "Редкая деталь инженера",
-    "icon": "/icons/other/engineer_part.jpg"
+    "icon": "/icons/other/engineer_part.png"
   },
   {
     "id": "useful-engineer-part",
     "name": "Полезная деталь инженера",
-    "icon": "/icons/other/engineer_part.jpg"
+    "icon": "/icons/other/engineer_part.png"
   },
   {
     "id": "valuable-engineer-part",
     "name": "Ценная деталь инженера",
-    "icon": "/icons/other/engineer_part.jpg"
+    "icon": "/icons/other/engineer_part.png"
   },
   {
     "id": "high-value-engineer-part",
     "name": "Очень ценная деталь",
-    "icon": "/icons/other/engineer_part.jpg"
+    "icon": "/icons/other/engineer_part.png"
   },
   {
     "id": "rainbow_stone_recipe",

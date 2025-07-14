@@ -20,7 +20,7 @@ const ItemFilters = ({
   setComponentFilter,
 }: Props) => {
   return (
-    <div className="mb-4 flex flex-wrap gap-4">
+    <div className="mb-4 flex flex-wrap gap-4 ">
       <input
         type="text"
         placeholder="Поиск по имени"
