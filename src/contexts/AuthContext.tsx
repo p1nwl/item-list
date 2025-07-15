@@ -1,4 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
 import {
   createContext,
   useEffect,
@@ -16,7 +15,7 @@ interface Profile {
   display_name: string | null;
   avatar_url: string | null;
   updated_at: string | null;
-  is_admin?: boolean;
+  is_admin: boolean;
 }
 
 interface AuthContextValue {
@@ -42,76 +41,70 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [profile, setProfile] = useState<Profile | null>(null);
   const [loading, setLoading] = useState(true);
 
-  const fetchProfile = useCallback(async (u: User) => {
-    console.log("[fetchProfile] calling for", u.id);
-    const { data: prof, error } = await supabase
+  const fetchOrUpsertProfile = useCallback(async (u: User) => {
+    console.log("→ fetchOrUpsertProfile", u.id);
+
+    const displayName =
+      u.user_metadata.display_name ??
+      u.user_metadata.full_name ??
+      u.user_metadata.user_name ??
+      u.email;
+
+    const { data: saved, error } = await supabase
       .from("profiles")
-      .select("*")
-      .eq("id", u.id)
+      .upsert({ id: u.id, display_name: displayName })
+      .select()
       .maybeSingle();
 
-    if (error) console.error("fetchProfile error", error);
-    console.log("[fetchProfile] result", prof);
-    setProfile(prof as Profile | null);
+    console.log("⚠️ upsert result", { saved, error });
+
+    if (error) {
+      console.error("profiles upsert/select error", error);
+    } else {
+      console.log("✅ Loaded profile:", saved);
+      setProfile(saved as Profile | null);
+    }
   }, []);
 
   useEffect(() => {
-    (async () => {
-      const { data } = await supabase.auth.getSession();
+    const init = async () => {
+      const { data, error } = await supabase.auth.getSession();
+      console.log("[getSession]", data, error);
       const u = data.session?.user ?? null;
+      console.log("[init getSession]", u);
       setUser(u);
-      if (u) await fetchProfile(u);
+      if (u) await fetchOrUpsertProfile(u);
       setLoading(false);
-    })();
-  }, [fetchProfile]);
+    };
+    init();
+  }, [fetchOrUpsertProfile]);
 
   useEffect(() => {
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange(
+    const { data: listener } = supabase.auth.onAuthStateChange(
       async (event: AuthChangeEvent, session: Session | null) => {
-        console.log("[AuthEvent]", event);
+        console.log("[onAuthStateChange]", event, session);
 
         const u = session?.user ?? null;
         setUser(u);
 
-        if (event !== "SIGNED_IN" && event !== "TOKEN_REFRESHED") {
+        if (
+          event === "SIGNED_IN" ||
+          event === "INITIAL_SESSION" ||
+          event === "TOKEN_REFRESHED"
+        ) {
+          if (u) {
+            await fetchOrUpsertProfile(u);
+          }
+        } else if (event === "SIGNED_OUT") {
           setProfile(null);
-          return;
         }
-
-        if (!u) return;
-
-        const displayName =
-          u.user_metadata.display_name ??
-          u.user_metadata.full_name ??
-          u.user_metadata.user_name ??
-          u.email;
-
-        const { data: saved, error } = await supabase
-          .from("profiles")
-          .upsert({ id: u.id, display_name: displayName })
-          .select("*")
-          .maybeSingle();
-
-        if (error) console.error("profiles upsert/select error", error);
-        setProfile(saved as Profile | null);
       }
     );
 
-    return () => subscription.unsubscribe();
-  }, [fetchProfile]);
-
-  useEffect(() => {
-    supabase.auth.getSession().then(({ data }) => {
-      const u = data.session?.user ?? null;
-      console.log("[force getSession]", u);
-      if (u) {
-        setUser(u);
-        fetchProfile(u);
-      }
-    });
-  }, []);
+    return () => {
+      listener.subscription.unsubscribe();
+    };
+  }, [fetchOrUpsertProfile]);
 
   const signInWithPassword = async (email: string, password: string) => {
     const { error } = await supabase.auth.signInWithPassword({
@@ -146,8 +139,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     console.log("Signing out…");
     const { error } = await supabase.auth.signOut();
     if (error) throw error;
-    console.log("Sign out done");
   };
+
   return (
     <AuthContext.Provider
       value={{
