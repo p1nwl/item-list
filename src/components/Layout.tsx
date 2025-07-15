@@ -1,11 +1,12 @@
 import { Outlet, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { useAuth, useDisplayName } from "../contexts/authHooks";
+import { useState, useContext } from "react";
+import { useDisplayName } from "../contexts/authHooks";
 import AuthModal from "./AuthModal";
 import { useLayoutControls } from "../contexts/useLayoutControls";
+import { AuthContext } from "../contexts/AuthContext";
 
 const Layout = () => {
-  const { user, signOut } = useAuth();
+  const { user, profile, signOut } = useContext(AuthContext)!;
   const [showAuth, setShowAuth] = useState(false);
   const name = useDisplayName();
   const navigate = useNavigate();
@@ -44,9 +45,20 @@ const Layout = () => {
           {user ? (
             <>
               <span className="text-sm">Привет, {name}</span>
+
+              {profile?.is_admin && (
+                <button
+                  onClick={() => navigate("/admin/upload")}
+                  className="py-1 border rounded text-sm bg-blue-100 px-2 hover:bg-blue-200 transition"
+                >
+                  Загрузить предмет
+                </button>
+              )}
+
               <button
                 type="button"
                 onClick={async () => {
+                  console.log("Logout button clicked");
                   try {
                     await signOut();
                     navigate("/");
@@ -54,7 +66,6 @@ const Layout = () => {
                     console.error(e);
                   }
                 }}
-                className="py-1 border rounded"
               >
                 Выйти
               </button>

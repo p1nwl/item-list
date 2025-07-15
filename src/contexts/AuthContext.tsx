@@ -16,6 +16,7 @@ interface Profile {
   display_name: string | null;
   avatar_url: string | null;
   updated_at: string | null;
+  is_admin?: boolean;
 }
 
 interface AuthContextValue {
@@ -42,6 +43,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState(true);
 
   const fetchProfile = useCallback(async (u: User) => {
+    console.log("[fetchProfile] calling for", u.id);
     const { data: prof, error } = await supabase
       .from("profiles")
       .select("*")
@@ -49,6 +51,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       .maybeSingle();
 
     if (error) console.error("fetchProfile error", error);
+    console.log("[fetchProfile] result", prof);
     setProfile(prof as Profile | null);
   }, []);
 
@@ -76,6 +79,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
           setProfile(null);
           return;
         }
+
         if (!u) return;
 
         const displayName =
@@ -87,7 +91,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         const { data: saved, error } = await supabase
           .from("profiles")
           .upsert({ id: u.id, display_name: displayName })
-          .select()
+          .select("*")
           .maybeSingle();
 
         if (error) console.error("profiles upsert/select error", error);
@@ -97,6 +101,17 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
     return () => subscription.unsubscribe();
   }, [fetchProfile]);
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => {
+      const u = data.session?.user ?? null;
+      console.log("[force getSession]", u);
+      if (u) {
+        setUser(u);
+        fetchProfile(u);
+      }
+    });
+  }, []);
 
   const signInWithPassword = async (email: string, password: string) => {
     const { error } = await supabase.auth.signInWithPassword({
@@ -131,6 +146,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     console.log("Signing out…");
     const { error } = await supabase.auth.signOut();
     if (error) throw error;
+    console.log("Sign out done");
   };
   return (
     <AuthContext.Provider
