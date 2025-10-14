@@ -1,0 +1,344 @@
+[
+  {
+    "id": "sword_of_forest",
+    "name": "Меч Леса",
+    "icon": "sword_of_forest.png",
+    "description": "2 часть Сета Леса",
+    "bonus": [
+      { "stat": "Attack", "value": 33 },
+      { "stat": "Parameters", "value": 22 },
+      { "stat": "AS", "value": 20, "percent": true }
+    ],
+    "components": [
+      "sword_of_forest_recipe",
+      "banal_gloves",
+      "aborigine_horn",
+      "jewelry"
+    ]
+  },
+  {
+    "id": "helm_of_forest",
+    "name": "Шлем Леса",
+    "icon": "helm_of_forest.png",
+    "description": "1 часть Сета Леса",
+    "bonus": [
+      { "stat": "Parameters", "value": 20 },
+      { "stat": "Attack", "value": 15 },
+      { "stat": "HP", "value": 100 },
+      { "stat": "MP", "value": 70 }
+    ],
+    "components": [
+      "helm_of_forest_recipe",
+      "magician_dagger",
+      "vampire_mask",
+      "urn",
+      "orb_of_light"
+    ]
+  },
+  {
+    "id": "set_of_forest",
+    "name": "I Сет Леса",
+    "icon": "set_of_forest.png",
+    "description": "Мощный сет жителей Леса Боли",
+    "bonus": [
+      { "stat": "Parameters", "value": 70 },
+      { "stat": "Attack", "value": 100 },
+      { "stat": "HP", "value": 700 },
+      { "stat": "MP", "value": 400 },
+      { "stat": "MDef", "value": 9, "percent": true },
+      { "stat": "AbilityCritChance", "value": 2, "percent": true },
+      { "stat": "AbilityCritDamage", "value": 10, "percent": true },
+      { "stat": "AllExtracts", "value": 3, "percent": true }
+    ],
+    "ability": "Повышает максимальный запас HP и MP на 2000 в течении 10 секунд. Перезарядка 20 сек.",
+    "components": [
+      "forest_set_activator",
+      "helm_of_forest",
+      "sword_of_forest",
+      "bandit_breastplate",
+      "set_of_forest_recipe"
+    ]
+  },
+  {
+    "id": "new_year_hat",
+    "name": "Новогодняя шапка",
+    "icon": "dummy.png",
+    "components": ["set_of_luke", "set_of_giant", "new_year_hat_recipe"]
+  },
+  {
+    "id": "knight_move",
+    "name": "Ход конём",
+    "components": [],
+    "icon": "/icons/dummy.png"
+  },
+  {
+    "id": "elemental_ingot",
+    "name": "Элементальный слиток",
+    "icon": "/icons/stones/elemental_ingot.png",
+    "components": [
+      "armor_of_scum",
+      "eclipse",
+      "rainbow_stone",
+      "elemental_ingot_recipe"
+    ]
+  },
+  {
+    "id": "rainbow_stone",
+    "name": "Радужный камень",
+    "icon": "/icons/stones/rainbow_stone.png",
+    "components": ["ruby", "sapphire", "obsidian", "rainbow_stone_recipe"]
+  },
+  {
+    "id": "fusion",
+    "name": "Слияние",
+    "components": [
+      "soul_of_galahan",
+      "soul_of_more",
+      "soul_of_crusher",
+      "ruined_soul",
+      "axe_of_bones"
+    ],
+    "icon": "/icons/orchest/fusion.png"
+  },
+  {
+    "id": "dark_unity",
+    "name": "Темное единство",
+    "components": [
+      "unity",
+      "soul_of_assir",
+      "soul_of_asmodeus",
+      "ruined_soul",
+      "dark_unity_recipe"
+    ],
+    "icon": "dark_unity.png"
+  },
+  {
+    "id": "cursed_unity",
+    "name": "Проклятое Единство",
+    "components": [
+      "dark_unity",
+      "soul_of_cursed_mother",
+      "soul_of_kropus",
+      "soul_of_lenkur",
+      "soul_of_cursed_incinerator"
+    ],
+    "icon": "dummy.png"
+  },
+  {
+    "id": "poisonous_rune_of_strength",
+    "name": "Ядовитая руна Силы",
+    "icon": "poisonous_rune_of_strength.png",
+    "components": [
+      "soul_of_crusher",
+      "soul_of_galahan",
+      "soul_of_more",
+      "axe_of_bones",
+      "bark",
+      "poisinous_rune_of_strength_recipe"
+    ]
+  },
+  {
+    "id": "poisonous_rune_of_agility",
+    "name": "Ядовитая руна Ловкости",
+    "icon": "poisonous_rune_of_agility.png",
+    "components": [
+      "soul_of_crusher",
+      "soul_of_galahan",
+      "soul_of_more",
+      "axe_of_bones",
+      "bark",
+      "poisinous_rune_of_agility_recipe"
+    ]
+  },
+  {
+    "id": "poisonous_rune_of_wisdom",
+    "name": "Ядовитая руна Разума",
+    "icon": "poisonous_rune_of_wisdom.png",
+    "components": [
+      "soul_of_crusher",
+      "soul_of_galahan",
+      "soul_of_more",
+      "axe_of_bones",
+      "bark",
+      "poisinous_rune_of_wisdom_recipe"
+    ]
+  },
+  {
+    "id": "magical_amulet_es",
+    "name": "Магический оберег(Э.С)",
+    "icon": "magical_amulet.png",
+    "components": ["magical_amulet_3", "elemental_ingot"],
+    "additionalInfoTitle": [
+      "Чтобы сделать Магический оберег(Э.С) нужно вставить в него ",
+      {
+        "text": "Элементальный слиток",
+        "refId": "elemental_ingot"
+      },
+      "."
+    ]
+  },
+  {
+    "id": "cursed_amulet_es",
+    "name": "Проклятый оберег(Э.С)",
+    "icon": "cursed_amulet.png",
+    "components": ["cursed_amulet_3", "elemental_ingot"],
+    "additionalInfoTitle": [
+      "Чтобы сделать Проклятый оберег(Э.С) нужно вставить в него ",
+      {
+        "text": "Элементальный слиток",
+        "refId": "elemental_ingot"
+      },
+      "."
+    ]
+  },
+  {
+    "id": "brightness_3",
+    "name": "Яркость(3)",
+    "components": ["brightness_2", "rotten_carcass"],
+    "icon": "dummy.png"
+  },
+  {
+    "id": "brightness_2",
+    "name": "Яркость(2)",
+    "components": ["brightness_1", "insignificant_scroll"],
+    "icon": "dummy.png"
+  },
+  {
+    "id": "flight_of_thought_3",
+    "name": "Полет мысли(3)",
+    "components": ["flight_of_thought_2", "rotten_carcass"],
+    "icon": "dummy.png"
+  },
+  {
+    "id": "flight_of_thought_2",
+    "name": "Полет мысли(2)",
+    "components": ["flight_of_thought_1", "insignificant_scroll"],
+    "icon": "dummy.png"
+  },
+  {
+    "id": "burst_of_rage_3",
+    "name": "Вспышка ярости(3)",
+    "components": ["burst_of_rage_2", "rotten_carcass"],
+    "icon": "dummy.png"
+  },
+  {
+    "id": "burst_of_rage_2",
+    "name": "Вспышка ярости(2)",
+    "components": ["burst_of_rage_1", "insignificant_scroll"],
+    "icon": "dummy.png"
+  },
+  {
+    "id": "code_of_necromancers",
+    "name": "Кодекс некромантов",
+    "icon": "tome.jpg",
+    "description": "Собирается из 10-и Страниц Кодекса.",
+    "additionalInfoTitle": "Страница Кодекса получается с заданий:",
+    "additionalInfo": [
+      "Вожак кентавров",
+      "Узуран",
+      "Великая опасность",
+      "Ядовитая опасность",
+      "Проверка духа",
+      "Страж течений",
+      "Дорога дальняя",
+      "Смерть",
+      "Покажите мне путь",
+      "Убить мурлока-раба (находится в невидимости на острове рядом с продавцами рецептов на реликвии и чёрные предметы, чтобы попасть туда необходимо купить Фрегат в здании \"Верфь ночных эльфов\" в Орхесте и доплыть)"
+    ]
+  },
+  {
+    "id": "magical_amulet_1",
+    "name": "Магический оберег(1)",
+    "icon": "magical_amulet.png",
+    "components": [
+      "code_of_necromancers",
+      "book_of_strength",
+      "book_of_agility",
+      "book_of_wisdom",
+      "magical_amulet_recipe"
+    ]
+  },
+  {
+    "id": "magical_amulet_2",
+    "name": "Магический оберег(2)",
+    "icon": "magical_amulet.png",
+    "components": ["magical_amulet_1", "ancient_parchment"]
+  },
+  {
+    "id": "magical_amulet_3",
+    "name": "Магический оберег(3)",
+    "icon": "magical_amulet.png",
+    "components": ["magical_amulet_2", "rotten_skull"]
+  },
+  {
+    "id": "introduction_to_absolute",
+    "name": "Введение в абсолют",
+    "components": [
+      "bloody_robot",
+      "shadow_vampire",
+      "bloody_fury",
+      "bloody_impudence",
+      "introduction_to_absolute_recipe"
+    ],
+    "icon": "introduction_to_absolute.png"
+  },
+  {
+    "id": "carnival_mask",
+    "name": "Маска с карнавала",
+    "icon": "carnival_mask.png",
+    "components": [
+      "ferocity_of_beasts",
+      "gaze",
+      "energy",
+      "repairology",
+      "carnival_mask_recipe"
+    ]
+  },
+  {
+    "id": "soul_of_cursed_mother",
+    "name": "Душа Проклятой Матери",
+    "components": [
+      "mental_anguish",
+      "spirit_of_grave",
+      "flask_of_blood",
+      "soul_of_cursed_mother_recipe"
+    ],
+    "icon": "dummy.png"
+  },
+  {
+    "id": "soul_of_kropus",
+    "name": "Душа Кропуса",
+    "icon": "dummy.png"
+  },
+  {
+    "id": "essence_of_warrior_po",
+    "name": "Сущность воина(п.о)",
+    "icon": "dummy.png"
+  },
+  {
+    "id": "essence_of_thief_po",
+    "name": "Сущность вора(п.о)",
+    "icon": "dummy.png"
+  },
+  {
+    "id": "essence_of_mage_po",
+    "name": "Сущность мага(п.о)",
+    "icon": "dummy.png"
+  },
+  {
+    "id": "cube_opal",
+    "name": "Кубик(опал)",
+    "icon": "dummy.png"
+  },
+  {
+    "id": "bloody_diadem_emerald",
+    "name": "Кровавая диадема(изумруд)",
+    "icon": "dummy.png"
+  },
+  {
+    "id": "cursed_obsidian",
+    "name": "Проклятый обсидиан",
+    "icon": "/icons/stones/cursed_obsidian.png",
+    "components": ["obsidian", "bark"]
+  }
+]

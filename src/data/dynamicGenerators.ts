@@ -9,7 +9,6 @@ export interface Item {
   icon: string;
   description?: string;
   components?: string[];
-  craftsInto?: string[];
   droppedBy?: string[];
   boughtFrom?: string;
 }
@@ -43,13 +42,11 @@ export function generateItems(config: GeneratorConfig): Item[] {
       components,
     });
 
-    // Генерация рецепта для каждого предмета
     items.push({
       id: `${id}_recipe`,
       name: `${name} (рецепт)`,
       icon: config.recipeIcon || "/icons/recipe.png",
       description: `Рецепт для ${name}`,
-      craftsInto: [id],
     });
   }
 

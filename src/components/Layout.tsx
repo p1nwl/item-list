@@ -6,11 +6,15 @@ import { useLayoutControls } from "../contexts/useLayoutControls";
 import { AuthContext } from "../contexts/AuthContext";
 
 const Layout = () => {
-  const { user, profile, signOut } = useContext(AuthContext)!;
+  const { user, profile, signOut, loading } = useContext(AuthContext)!;
   const [showAuth, setShowAuth] = useState(false);
   const name = useDisplayName();
   const navigate = useNavigate();
   const { controls } = useLayoutControls();
+
+  if (loading) {
+    return <div className="p-8 text-center">Загрузка...</div>;
+  }
 
   return (
     <div className="min-h-screen max-w-screen flex flex-col">

@@ -68,13 +68,34 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     const init = async () => {
-      const { data, error } = await supabase.auth.getSession();
-      console.log("[getSession]", data, error);
-      const u = data.session?.user ?? null;
-      console.log("[init getSession]", u);
-      setUser(u);
-      if (u) await fetchOrUpsertProfile(u);
-      setLoading(false);
+      let timeoutId: NodeJS.Timeout | null = null;
+      try {
+        console.log("AuthProvider init: calling getSession");
+        const timeoutPromise = new Promise(
+          (_, reject) =>
+            (timeoutId = setTimeout(
+              () => reject(new Error("getSession timeout")),
+              3000
+            ))
+        );
+        const { data, error } = (await Promise.race([
+          supabase.auth.getSession(),
+          timeoutPromise,
+        ])) as Awaited<ReturnType<typeof supabase.auth.getSession>>;
+        if (timeoutId) clearTimeout(timeoutId);
+        console.log("[getSession]", data, error);
+        const u = data.session?.user ?? null;
+        console.log("[init getSession] user:", u);
+        setUser(u);
+        if (u) {
+          await fetchOrUpsertProfile(u);
+        }
+      } catch (err) {
+        console.error("Error in AuthProvider init:", err);
+      } finally {
+        console.log("AuthProvider init: setLoading(false)");
+        setLoading(false);
+      }
     };
     init();
   }, [fetchOrUpsertProfile]);
@@ -95,8 +116,11 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
           if (u) {
             await fetchOrUpsertProfile(u);
           }
+          setLoading(false);
         } else if (event === "SIGNED_OUT") {
           setProfile(null);
+          setUser(null);
+          setLoading(false);
         }
       }
     );

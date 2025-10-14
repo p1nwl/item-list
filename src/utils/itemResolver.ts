@@ -1,4 +1,3 @@
-// src/data/itemResolver.ts
 import { dynamicItems } from "../data/dynamicGenerators";
 import type { Item } from "../types/Item";
 
@@ -24,13 +23,14 @@ allItems.forEach((item) => {
   });
 });
 
-const enrichedItems: Item[] = allItems.map((item) => {
-  const existing = item.craftsInto || [];
-  const fromIndex = craftsIntoIndex[item.id] || [];
-  return {
-    ...item,
-    craftsInto: Array.from(new Set([...existing, ...fromIndex])),
-  };
+const enrichedItems: Item[] = allItems.map((item) => ({
+  ...item,
+  craftsInto: craftsIntoIndex[item.id] || [],
+}));
+
+const itemById = new Map<string, Item>();
+enrichedItems.forEach((item) => {
+  itemById.set(item.id, item);
 });
 
 export function getAllItems(): Item[] {
@@ -38,5 +38,5 @@ export function getAllItems(): Item[] {
 }
 
 export function getItemById(id: string): Item | undefined {
-  return enrichedItems.find((i) => i.id === id);
+  return itemById.get(id);
 }

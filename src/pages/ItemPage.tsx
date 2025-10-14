@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { getItemById, getAllItems } from "../utils/itemResolver";
-import ItemDetail from "./ItemDetail";
+import ItemDetail from "../components/ItemDetail";
 
 const ItemPage = () => {
   const { id } = useParams();

@@ -1,50 +1,5 @@
 [
   {
-    "id": "ice_shard",
-    "name": "Осколок льда",
-    "icon": "/icons/other/ice_shard.png"
-  },
-  {
-    "id": "dark_claw_of_prime",
-    "name": "Темный Коготь Прайма",
-    "icon": "/icons/other/dark_fang.png"
-  },
-  {
-    "id": "bloodstained_claw",
-    "name": "Окровавленный Коготь",
-    "icon": "/icons/other/bloody_fang.png"
-  },
-  {
-    "id": "essence_of_stone",
-    "name": "Эссенция Камня",
-    "icon": "/icons/other/dummy.png"
-  },
-  {
-    "id": "essence_of_earth",
-    "name": "Эссенция земли",
-    "icon": "/icons/other/dummy.png"
-  },
-  {
-    "id": "essence_of_the_sea",
-    "name": "Эссенция моря",
-    "icon": "/icons/other/dummy.png"
-  },
-  {
-    "id": "essence_of_darkness",
-    "name": "Эссенция тьмы",
-    "icon": "/icons/other/dummy.png"
-  },
-  {
-    "id": "cube_opal",
-    "name": "Кубик(опал)",
-    "icon": "/icons/other/dummy.png"
-  },
-  {
-    "id": "bloody_diadem_emerald",
-    "name": "Кровавая диадема(изумруд)",
-    "icon": "/icons/other/dummy.png"
-  },
-  {
     "id": "common-trash",
     "name": "Обычный мусор",
     "description": "Можно продать Скупщику хлама, кликнув по нему правой клавишей. Не больше 10 штук за раз!",
@@ -56,7 +11,7 @@
       "xpRange": [40, 100],
       "dropItemId": "common-engineer-part"
     },
-    "icon": "/icons/other/trash.jpg"
+    "icon": "trash.jpg"
   },
   {
     "id": "uncommon-trash",
@@ -70,7 +25,7 @@
       "xpRange": [50, 110],
       "dropItemId": "uncommon-engineer-part"
     },
-    "icon": "/icons/other/trash.jpg"
+    "icon": "trash.jpg"
   },
   {
     "id": "rare-trash",
@@ -84,7 +39,7 @@
       "xpRange": [60, 130],
       "dropItemId": "rare-engineer-part"
     },
-    "icon": "/icons/other/trash.jpg"
+    "icon": "trash.jpg"
   },
   {
     "id": "useful-trash",
@@ -98,7 +53,7 @@
       "xpRange": [80, 150],
       "dropItemId": "useful-engineer-part"
     },
-    "icon": "/icons/other/trash.jpg"
+    "icon": "trash.jpg"
   },
   {
     "id": "valuable-trash",
@@ -112,7 +67,7 @@
       "xpRange": [100, 180],
       "dropItemId": "valuable-engineer-part"
     },
-    "icon": "/icons/other/trash.jpg"
+    "icon": "trash.jpg"
   },
   {
     "id": "high-value-trash",
@@ -126,43 +81,37 @@
       "xpRange": [130, 200],
       "dropItemId": "high-value-engineer-part"
     },
-    "icon": "/icons/other/trash.jpg"
+    "icon": "trash.jpg"
   },
   {
     "id": "common-engineer-part",
     "name": "Обычная деталь инженера",
-    "icon": "/icons/other/engineer_part.png"
+    "icon": "engineer_part.png"
   },
   {
     "id": "uncommon-engineer-part",
     "name": "Необычная деталь инженера",
-    "icon": "/icons/other/engineer_part.png"
+    "icon": "engineer_part.png"
   },
   {
     "id": "rare-engineer-part",
     "name": "Редкая деталь инженера",
-    "icon": "/icons/other/engineer_part.png"
+    "icon": "engineer_part.png"
   },
   {
     "id": "useful-engineer-part",
     "name": "Полезная деталь инженера",
-    "icon": "/icons/other/engineer_part.png"
+    "icon": "engineer_part.png"
   },
   {
     "id": "valuable-engineer-part",
     "name": "Ценная деталь инженера",
-    "icon": "/icons/other/engineer_part.png"
+    "icon": "engineer_part.png"
   },
   {
     "id": "high-value-engineer-part",
     "name": "Очень ценная деталь",
-    "icon": "/icons/other/engineer_part.png"
-  },
-  {
-    "id": "rainbow_stone_recipe",
-    "name": "Радужный камень (рецепт)",
-    "icon": "/icons/hearthstone_recipe.png",
-    "droppedBy": ["Boss Тессеракт (Арена)"]
+    "icon": "engineer_part.png"
   },
   {
     "id": "obsidian",
@@ -175,11 +124,5 @@
       "Купить в магазине Кактуса в Пустошах(открывается после получения достижения \"Повелитель снега\",\"Мы не захлебнёмся\",\"Повелитель песка\")",
       "Также можно случайным образом получить из Стальных сундуков"
     ]
-  },
-  {
-    "id": "cursed_obsidian",
-    "name": "Проклятый обсидиан",
-    "icon": "/icons/stones/cursed_obsidian.png",
-    "components": ["obsidian", "bark"]
   }
 ]
