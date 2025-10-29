@@ -28,36 +28,33 @@ export function filterItems(items: Item[], options: FilterOptions): Item[] {
 
   const safeName = (it?: Item) => it?.name ?? "";
 
-  return (
-    items
-      /* --- поиск по названию --- */
-      .filter((item) => (normSearch ? includes(item.name, normSearch) : true))
+  return items
+    .filter((item) => {
+      if (!normSearch) return true;
+      return includes(item.name, normSearch) || includes(item.id, normSearch);
+    })
 
-      /* --- фильтр по дропу --- */
-      .filter((item) => {
-        if (!normDrop) return true;
-        const sources = (item.droppedBy ?? []).filter(Boolean) as string[];
-        return sources.some((src) => includes(src, normDrop));
-      })
+    .filter((item) => {
+      if (!normDrop) return true;
+      const sources = (item.droppedBy ?? []).filter(Boolean) as string[];
+      return sources.some((src) => includes(src, normDrop));
+    })
 
-      /* --- фильтр по компонентам --- */
-      .filter((item) => {
-        if (!normComponent) return true;
-        return (item.components ?? []).some((compId) =>
-          includes(safeName(itemMap[compId]), normComponent)
-        );
-      })
+    .filter((item) => {
+      if (!normComponent) return true;
+      return (item.components ?? []).some((compId) =>
+        includes(safeName(itemMap[compId]), normComponent)
+      );
+    })
 
-      /* --- сортировка по sortBy --- */
-      .sort((a, b) => {
-        const keyA = sortBy === "id" ? a.id : a.name;
-        const keyB = sortBy === "id" ? b.id : b.name;
-        const strA = keyA ?? "";
-        const strB = keyB ?? "";
-        return strA.localeCompare(strB, undefined, {
-          numeric: true,
-          sensitivity: "base",
-        });
-      })
-  );
+    .sort((a, b) => {
+      const keyA = sortBy === "id" ? a.id : a.name;
+      const keyB = sortBy === "id" ? b.id : b.name;
+      const strA = keyA ?? "";
+      const strB = keyB ?? "";
+      return strA.localeCompare(strB, undefined, {
+        numeric: true,
+        sensitivity: "base",
+      });
+    });
 }

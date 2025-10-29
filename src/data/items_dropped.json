@@ -662,7 +662,7 @@
   {
     "id": "elemental_ingot_recipe",
     "name": "Элементальный слиток (рецепт)",
-    "icon": "/icons/hearthstone_recipe.png",
+    "icon": "hearthstone_recipe.png",
     "droppedBy": ["Boss Глава Новогоднего Корпоратива Easy"]
   },
   {
@@ -819,19 +819,19 @@
     "id": "burst_of_rage_1",
     "name": "Вспышка ярости(1)",
     "droppedBy": ["Boss Мазарэль"],
-    "icon": "dummy.png"
+    "icon": "burst_of_rage.png"
   },
   {
     "id": "flight_of_thought_1",
     "name": "Полет мысли(1)",
     "droppedBy": ["Boss Мазарэль"],
-    "icon": "dummy.png"
+    "icon": "flight_of_thought.png"
   },
   {
     "id": "brightness_1",
     "name": "Яркость(1)",
     "droppedBy": ["Boss Мазарэль"],
-    "icon": "dummy.png"
+    "icon": "brightness.png"
   },
   {
     "id": "broken_scythe",
@@ -1052,7 +1052,595 @@
   {
     "id": "rainbow_stone_recipe",
     "name": "Радужный камень (рецепт)",
-    "icon": "/icons/hearthstone_recipe.png",
+    "icon": "hearthstone_recipe.png",
     "droppedBy": ["Boss Тессеракт (Арена)"]
+  },
+  {
+    "id": "sword_of_forest",
+    "name": "Меч Леса",
+    "icon": "sword_of_forest.png",
+    "description": "2 часть Сета Леса",
+    "bonus": [
+      { "stat": "Attack", "value": 33 },
+      { "stat": "Parameters", "value": 22 },
+      { "stat": "AS", "value": 20, "percent": true }
+    ],
+    "components": [
+      "sword_of_forest_recipe",
+      "banal_gloves",
+      "aborigine_horn",
+      "jewelry"
+    ]
+  },
+  {
+    "id": "helm_of_forest",
+    "name": "Шлем Леса",
+    "icon": "helm_of_forest.png",
+    "description": "1 часть Сета Леса",
+    "bonus": [
+      { "stat": "Parameters", "value": 20 },
+      { "stat": "Attack", "value": 15 },
+      { "stat": "HP", "value": 100 },
+      { "stat": "MP", "value": 70 }
+    ],
+    "components": [
+      "helm_of_forest_recipe",
+      "magician_dagger",
+      "vampire_mask",
+      "urn",
+      "orb_of_light"
+    ]
+  },
+  {
+    "id": "set_of_forest",
+    "name": "I Сет Леса",
+    "icon": "set_of_forest.png",
+    "description": "Мощный сет жителей Леса Боли",
+    "bonus": [
+      { "stat": "Parameters", "value": 70 },
+      { "stat": "Attack", "value": 100 },
+      { "stat": "HP", "value": 700 },
+      { "stat": "MP", "value": 400 },
+      { "stat": "MDef", "value": 9, "percent": true },
+      { "stat": "AbilityCritChance", "value": 2, "percent": true },
+      { "stat": "AbilityCritDamage", "value": 10, "percent": true },
+      { "stat": "AllExtracts", "value": 3, "percent": true }
+    ],
+    "ability": "Повышает максимальный запас HP и MP на 2000 в течении 10 секунд. Перезарядка 20 сек.",
+    "components": [
+      "forest_set_activator",
+      "helm_of_forest",
+      "sword_of_forest",
+      "bandit_breastplate",
+      "set_of_forest_recipe"
+    ]
+  },
+  {
+    "id": "new_year_hat",
+    "name": "Новогодняя шапка",
+    "icon": "dummy.png",
+    "components": ["set_of_luke", "set_of_giant", "new_year_hat_recipe"]
+  },
+  {
+    "id": "knight_move",
+    "name": "Ход конём",
+    "components": [],
+    "icon": "dummy.png"
+  },
+  {
+    "id": "elemental_ingot",
+    "name": "Элементальный слиток",
+    "icon": "stones/elemental_ingot.png",
+    "components": [
+      "armor_of_scum",
+      "eclipse",
+      "rainbow_stone",
+      "elemental_ingot_recipe"
+    ]
+  },
+  {
+    "id": "rainbow_stone",
+    "name": "Радужный камень",
+    "icon": "stones/rainbow_stone.png",
+    "components": ["ruby", "sapphire", "obsidian", "rainbow_stone_recipe"]
+  },
+  {
+    "id": "fusion",
+    "name": "Слияние",
+    "components": [
+      "soul_of_galahan",
+      "soul_of_more",
+      "soul_of_crusher",
+      "ruined_soul",
+      "axe_of_bones"
+    ],
+    "icon": "orchest/fusion.png"
+  },
+  {
+    "id": "dark_unity",
+    "name": "Темное единство",
+    "components": [
+      "unity",
+      "soul_of_assir",
+      "soul_of_asmodeus",
+      "ruined_soul",
+      "dark_unity_recipe"
+    ],
+    "icon": "dark_unity.png"
+  },
+  {
+    "id": "cursed_unity",
+    "name": "Проклятое Единство",
+    "components": [
+      "dark_unity",
+      "soul_of_cursed_mother",
+      "soul_of_kropus",
+      "soul_of_lenkur",
+      "soul_of_cursed_incinerator"
+    ],
+    "icon": "dummy.png"
+  },
+  {
+    "id": "poisonous_rune_of_strength",
+    "name": "Ядовитая руна Силы",
+    "icon": "poisonous_rune_of_strength.png",
+    "components": [
+      "soul_of_crusher",
+      "soul_of_galahan",
+      "soul_of_more",
+      "axe_of_bones",
+      "bark",
+      "poisinous_rune_of_strength_recipe"
+    ]
+  },
+  {
+    "id": "poisonous_rune_of_agility",
+    "name": "Ядовитая руна Ловкости",
+    "icon": "poisonous_rune_of_agility.png",
+    "components": [
+      "soul_of_crusher",
+      "soul_of_galahan",
+      "soul_of_more",
+      "axe_of_bones",
+      "bark",
+      "poisinous_rune_of_agility_recipe"
+    ]
+  },
+  {
+    "id": "poisonous_rune_of_wisdom",
+    "name": "Ядовитая руна Разума",
+    "icon": "poisonous_rune_of_wisdom.png",
+    "components": [
+      "soul_of_crusher",
+      "soul_of_galahan",
+      "soul_of_more",
+      "axe_of_bones",
+      "bark",
+      "poisinous_rune_of_wisdom_recipe"
+    ]
+  },
+  {
+    "id": "magical_amulet_es",
+    "name": "Магический оберег(Э.С)",
+    "icon": "magical_amulet.png",
+    "components": ["magical_amulet_3", "elemental_ingot"],
+    "additionalInfoTitle": [
+      "Чтобы сделать Магический оберег(Э.С) нужно вставить в него ",
+      {
+        "text": "Элементальный слиток",
+        "refId": "elemental_ingot"
+      },
+      "."
+    ]
+  },
+  {
+    "id": "cursed_amulet_es",
+    "name": "Проклятый оберег(Э.С)",
+    "icon": "cursed_amulet.png",
+    "components": ["cursed_amulet_3", "elemental_ingot"],
+    "additionalInfoTitle": [
+      "Чтобы сделать Проклятый оберег(Э.С) нужно вставить в него ",
+      {
+        "text": "Элементальный слиток",
+        "refId": "elemental_ingot"
+      },
+      "."
+    ]
+  },
+  {
+    "id": "brightness_3",
+    "name": "Яркость(3)",
+    "components": ["brightness_2", "rotten_carcass"],
+    "icon": "brightness.png"
+  },
+  {
+    "id": "brightness_2",
+    "name": "Яркость(2)",
+    "components": ["brightness_1", "insignificant_scroll"],
+    "icon": "brightness.png"
+  },
+  {
+    "id": "flight_of_thought_3",
+    "name": "Полет мысли(3)",
+    "components": ["flight_of_thought_2", "rotten_carcass"],
+    "icon": "flight_of_thought.png"
+  },
+  {
+    "id": "flight_of_thought_2",
+    "name": "Полет мысли(2)",
+    "components": ["flight_of_thought_1", "insignificant_scroll"],
+    "icon": "flight_of_thought.png"
+  },
+  {
+    "id": "burst_of_rage_3",
+    "name": "Вспышка ярости(3)",
+    "components": ["burst_of_rage_2", "rotten_carcass"],
+    "icon": "burst_of_rage.png"
+  },
+  {
+    "id": "burst_of_rage_2",
+    "name": "Вспышка ярости(2)",
+    "components": ["burst_of_rage_1", "insignificant_scroll"],
+    "icon": "burst_of_rage.png"
+  },
+  {
+    "id": "code_of_necromancers",
+    "name": "Кодекс некромантов",
+    "icon": "tome.jpg",
+    "description": "Собирается из 10-и Страниц Кодекса.",
+    "additionalInfoTitle": "Страница Кодекса получается с заданий:",
+    "additionalInfo": [
+      "Вожак кентавров",
+      "Узуран",
+      "Великая опасность",
+      "Ядовитая опасность",
+      "Проверка духа",
+      "Страж течений",
+      "Дорога дальняя",
+      "Смерть",
+      "Покажите мне путь",
+      "Убить мурлока-раба (находится в невидимости на острове рядом с продавцами рецептов на реликвии и чёрные предметы, чтобы попасть туда необходимо купить Фрегат в здании \"Верфь ночных эльфов\" в Орхесте и доплыть)"
+    ]
+  },
+  {
+    "id": "magical_amulet_1",
+    "name": "Магический оберег(1)",
+    "icon": "magical_amulet.png",
+    "components": [
+      "code_of_necromancers",
+      "book_of_strength",
+      "book_of_agility",
+      "book_of_wisdom",
+      "magical_amulet_recipe"
+    ]
+  },
+  {
+    "id": "magical_amulet_2",
+    "name": "Магический оберег(2)",
+    "icon": "magical_amulet.png",
+    "components": ["magical_amulet_1", "ancient_parchment"]
+  },
+  {
+    "id": "magical_amulet_3",
+    "name": "Магический оберег(3)",
+    "icon": "magical_amulet.png",
+    "components": ["magical_amulet_2", "rotten_skull"]
+  },
+  {
+    "id": "introduction_to_absolute",
+    "name": "Введение в абсолют",
+    "components": [
+      "bloody_robot",
+      "shadow_vampire",
+      "bloody_fury",
+      "bloody_impudence",
+      "introduction_to_absolute_recipe"
+    ],
+    "icon": "introduction_to_absolute.png"
+  },
+  {
+    "id": "carnival_mask",
+    "name": "Маска с карнавала",
+    "icon": "carnival_mask.png",
+    "components": [
+      "ferocity_of_beasts",
+      "gaze",
+      "energy",
+      "repairology",
+      "carnival_mask_recipe"
+    ]
+  },
+  {
+    "id": "soul_of_cursed_mother",
+    "name": "Душа Проклятой Матери",
+    "components": [
+      "mental_anguish",
+      "spirit_of_grave",
+      "flask_of_blood",
+      "soul_of_cursed_mother_recipe"
+    ],
+    "icon": "dummy.png"
+  },
+  {
+    "id": "soul_of_kropus",
+    "name": "Душа Кропуса",
+    "icon": "dummy.png"
+  },
+  {
+    "id": "essence_of_warrior_po",
+    "name": "Сущность воина(п.о)",
+    "icon": "dummy.png"
+  },
+  {
+    "id": "essence_of_thief_po",
+    "name": "Сущность вора(п.о)",
+    "icon": "dummy.png"
+  },
+  {
+    "id": "essence_of_mage_po",
+    "name": "Сущность мага(п.о)",
+    "icon": "dummy.png"
+  },
+  {
+    "id": "cube_opal",
+    "name": "Кубик(опал)",
+    "icon": "dummy.png"
+  },
+  {
+    "id": "bloody_diadem_emerald",
+    "name": "Кровавая диадема(изумруд)",
+    "icon": "dummy.png"
+  },
+  {
+    "id": "cursed_obsidian",
+    "name": "Проклятый обсидиан",
+    "icon": "stones/cursed_obsidian.png",
+    "components": ["obsidian", "bark"]
+  },
+  {
+    "id": "common-trash",
+    "name": "Обычный мусор",
+    "description": "Можно продать Скупщику хлама, кликнув по нему правой клавишей. Не больше 10 штук за раз!",
+    "droppedBy": ["Темный Волк"],
+    "isTrash": true,
+    "trashInfo": {
+      "goldRange": [20, 100],
+      "markRange": [2, 10],
+      "xpRange": [40, 100],
+      "dropItemId": "common-engineer-part"
+    },
+    "icon": "trash.jpg"
+  },
+  {
+    "id": "uncommon-trash",
+    "name": "Необычный мусор",
+    "description": "Можно продать Скупщику хлама, кликнув по нему правой клавишей. Не больше 10 штук за раз!",
+    "droppedBy": ["Паук Огня"],
+    "isTrash": true,
+    "trashInfo": {
+      "goldRange": [25, 150],
+      "markRange": [3, 15],
+      "xpRange": [50, 110],
+      "dropItemId": "uncommon-engineer-part"
+    },
+    "icon": "trash.jpg"
+  },
+  {
+    "id": "rare-trash",
+    "name": "Редкий мусор",
+    "description": "Можно продать Скупщику хлама, кликнув по нему правой клавишей. Не больше 10 штук за раз!",
+    "droppedBy": ["Зеленый Драконид"],
+    "isTrash": true,
+    "trashInfo": {
+      "goldRange": [30, 170],
+      "markRange": [4, 20],
+      "xpRange": [60, 130],
+      "dropItemId": "rare-engineer-part"
+    },
+    "icon": "trash.jpg"
+  },
+  {
+    "id": "useful-trash",
+    "name": "Полезный мусор",
+    "description": "Можно продать Скупщику хлама, кликнув по нему правой клавишей. Не больше 10 штук за раз!",
+    "droppedBy": ["Джунглевый хищник"],
+    "isTrash": true,
+    "trashInfo": {
+      "goldRange": [35, 200],
+      "markRange": [5, 30],
+      "xpRange": [80, 150],
+      "dropItemId": "useful-engineer-part"
+    },
+    "icon": "trash.jpg"
+  },
+  {
+    "id": "valuable-trash",
+    "name": "Ценный мусор",
+    "description": "Можно продать Скупщику хлама, кликнув по нему правой клавишей. Не больше 10 штук за раз!",
+    "droppedBy": ["Кровавый ковбой"],
+    "isTrash": true,
+    "trashInfo": {
+      "goldRange": [50, 290],
+      "markRange": [10, 33],
+      "xpRange": [100, 180],
+      "dropItemId": "valuable-engineer-part"
+    },
+    "icon": "trash.jpg"
+  },
+  {
+    "id": "high-value-trash",
+    "name": "Мусор высокой ценности",
+    "description": "Можно продать Скупщику хлама, кликнув по нему правой клавишей. Не больше 10 штук за раз!",
+    "droppedBy": ["Сторож Огня"],
+    "isTrash": true,
+    "trashInfo": {
+      "goldRange": [100, 300],
+      "markRange": [14, 34],
+      "xpRange": [130, 200],
+      "dropItemId": "high-value-engineer-part"
+    },
+    "icon": "trash.jpg"
+  },
+  {
+    "id": "common-engineer-part",
+    "name": "Обычная деталь инженера",
+    "icon": "engineer_part.png"
+  },
+  {
+    "id": "uncommon-engineer-part",
+    "name": "Необычная деталь инженера",
+    "icon": "engineer_part.png"
+  },
+  {
+    "id": "rare-engineer-part",
+    "name": "Редкая деталь инженера",
+    "icon": "engineer_part.png"
+  },
+  {
+    "id": "useful-engineer-part",
+    "name": "Полезная деталь инженера",
+    "icon": "engineer_part.png"
+  },
+  {
+    "id": "valuable-engineer-part",
+    "name": "Ценная деталь инженера",
+    "icon": "engineer_part.png"
+  },
+  {
+    "id": "high-value-engineer-part",
+    "name": "Очень ценная деталь",
+    "icon": "engineer_part.png"
+  },
+  {
+    "id": "obsidian",
+    "name": "Обсидиан",
+    "icon": "stones/obsidian.png",
+    "additionalInfoTitle": "Существует несколько способов получить Обсидиан:",
+    "additionalInfo": [
+      "Собрать 30 кусочков Обсидиана на карте",
+      "Сделать достижение \"Искатель сокровищ\"",
+      "Купить в магазине Кактуса в Пустошах(открывается после получения достижения \"Повелитель снега\",\"Мы не захлебнёмся\",\"Повелитель песка\")",
+      "Также можно случайным образом получить из Стальных сундуков"
+    ]
+  },
+  {
+    "id": "sapphire",
+    "name": "Сапфир",
+    "icon": "sapphire.png",
+    "boughtFrom": ["Смотрящая в Ночь"],
+    "additionalInfoTitle": "Чтобы получить Сапфир - необходимо выполнить квест \"Черный список\""
+  },
+  {
+    "id": "ruby",
+    "name": "Рубин",
+    "icon": "ruby.png",
+    "boughtFrom": ["Дух Возмездия"],
+    "additionalInfoTitle": "Чтобы получить Рубин - необходимо выполнить квест \"Пускай горит\""
+  },
+  {
+    "id": "set_of_forest_recipe",
+    "name": "Сет Леса(рецепт)",
+    "icon": "guldan_recipe.png",
+    "boughtFrom": "F5 Shop"
+  },
+  {
+    "id": "cursed_whirlwind",
+    "name": "Проклятый вихрь",
+    "icon": "dummy.png",
+    "additionalInfoTitle": [
+      "Для получения требуется: Убить босса Пагубный, имея в инвентаре предмет ",
+      {
+        "text": "Наручи мёртвых",
+        "refId": "bracers_of_the_dead"
+      },
+      "."
+    ]
+  },
+  {
+    "id": "amulet_of_vengeance",
+    "name": "Оберег возмездия",
+    "icon": "dummy.png",
+    "additionalInfoTitle": [
+      "Для получения требуется: сжечь в вулкане ",
+      {
+        "text": "Снеговика",
+        "refId": "snowman"
+      },
+      "."
+    ]
+  },
+  {
+    "id": "magical_amulet_recipe",
+    "name": "Магический оберег (рецепт)",
+    "icon": "guldan_recipe.png",
+    "boughtFrom": ["Принц Феникс"]
+  },
+  {
+    "id": "introduction_to_absolute_recipe",
+    "name": "Введение в абсолют (рецепт)",
+    "boughtFrom": "Рыцарь смерти (Кровавый Бастион)",
+    "icon": "introduction_to_absolute_recipe.png"
+  },
+  {
+    "id": "surge_of_bloody_rage",
+    "name": "Наплыв кровавой ярости",
+    "icon": "surge_of_bloody_rage.png",
+    "droppedBy": ["Boss Жрица Сухожилий"],
+    "bonus": [{ "stat": "AbilityDamage", "value": 5, "percent": true }],
+    "aura": "+200ед. HP/сек"
+  },
+  {
+    "id": "torment_inside_the_tendons",
+    "name": "Терзание внутри сухожилий",
+    "icon": "torment_inside_the_tendons.png",
+    "droppedBy": ["Boss Жрица Сухожилий"],
+    "bonus": [
+      { "stat": "Parameters", "value": 150 },
+      { "stat": "MP", "value": 5000 },
+      { "stat": "Attack", "value": 2500 }
+    ]
+  },
+  {
+    "id": "concentration_of_priestess",
+    "name": "Концентрация Жрицы",
+    "icon": "concentration_of_priestess.png",
+    "droppedBy": ["Boss Жрица Сухожилий"],
+    "bonus": [
+      { "stat": "Defense", "value": 100 },
+      { "stat": "AllExtracts", "value": 5, "percent": true },
+      { "stat": "MDef", "value": 5, "percent": true }
+    ],
+    "effects": ["20% шанс на универсальный крит ×1.9"]
+  },
+  {
+    "id": "set_of_tendons",
+    "name": "Набор сухожилий",
+    "icon": "set_of_tendons.png",
+    "components": [
+      "surge_of_bloody_rage",
+      "torment_inside_the_tendons",
+      "concentration_of_priestess"
+    ],
+    "bonus": [
+      { "stat": "Parameters", "value": 150 },
+      { "stat": "MP", "value": 5000 },
+      { "stat": "Attack", "value": 2500 },
+      { "stat": "Defense", "value": 100 },
+      { "stat": "AllExtracts", "value": 5, "percent": true },
+      { "stat": "MDef", "value": 5, "percent": true },
+      { "stat": "AbilityDamage", "value": 5, "percent": true }
+    ],
+    "effects": ["20% шанс на универсальный крит ×1.9"],
+    "aura": "+200ед. HP/сек"
+  },
+  {
+    "id": "blood_set_activator",
+    "name": "Активатор Сета Крови",
+    "icon": "blood_set_activator.png"
+  },
+  {
+    "id": "rot_set_activator",
+    "name": "Активатор Сета Гнили",
+    "icon": "rot_set_activator.png"
   }
 ]

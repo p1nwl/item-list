@@ -20,10 +20,10 @@ const ItemFilters = ({
   setComponentFilter,
 }: Props) => {
   return (
-    <div className="mb-4 flex flex-wrap gap-4 ">
+    <div className="mb-4 flex flex-wrap gap-4">
       <input
         type="text"
-        placeholder="Поиск по имени"
+        placeholder="Поиск предметов"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         className="p-2 border rounded"
@@ -34,8 +34,12 @@ const ItemFilters = ({
         onChange={(e) => setSortBy(e.target.value as "name" | "id")}
         className="p-2 border rounded"
       >
-        <option value="name">Сортировка: по имени</option>
-        <option value="id">Сортировка: по ID</option>
+        <option value="name" className="text-gray-500">
+          Сортировка: по названию
+        </option>
+        <option value="id" className="text-gray-500">
+          Сортировка: по ID
+        </option>
       </select>
 
       <input

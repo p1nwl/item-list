@@ -1,4 +1,4 @@
-import { dynamicItems } from "../data/dynamicGenerators";
+import { dynamicItems } from "../data/dynamicItems";
 import type { Item } from "../types/Item";
 
 const modules = import.meta.glob("../data/items_*.json", { eager: true });

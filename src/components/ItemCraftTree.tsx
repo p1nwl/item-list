@@ -52,8 +52,10 @@ const ItemCraftTree = ({ item, allItems, onSelectItem }: Props) => {
             >
               {item.icon && (
                 <img
-                  src={item.icon || "/icons/placeholder.png"}
-                  alt={item.name}
+                  src={item.icon ? `/icons/${item.icon}` : "/icons/dummy.png"}
+                  onError={(e) =>
+                    ((e.target as HTMLImageElement).src = "/icons/dummy.png")
+                  }
                   className="w-10 h-10 object-contain"
                 />
               )}

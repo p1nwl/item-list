@@ -21,6 +21,7 @@ const statNames: Record<string, string> = {
   Attack: "атаки",
   Parameters: "к параметрам",
   MDef: "защиты от магии",
+  AbilityDamage: "к урону от способностей",
   AbilityCritChance: "к шансу крита навыками",
   AbilityCritDamage: "к критическому урону навыками",
   AllExtracts: "ко всем Экстрактам",
@@ -38,8 +39,10 @@ const ItemDetail = ({ item, items, onSelectItem }: Props) => {
       <div className="p-4 pt-0 mx-auto">
         <div className="flex items-center gap-4 mb-4">
           <img
-            src={item.icon || "/icons/placeholder.png"}
-            alt={item.name}
+            src={item.icon ? `/icons/${item.icon}` : "/icons/dummy.png"}
+            onError={(e) =>
+              ((e.target as HTMLImageElement).src = "/icons/dummy.png")
+            }
             className="w-16 h-16 object-contain"
           />
           <div>
@@ -95,7 +98,10 @@ const ItemDetail = ({ item, items, onSelectItem }: Props) => {
       {/* Заголовок и иконка */}
       <div className="flex items-center gap-4 mb-4">
         <img
-          src={item.icon || "/icons/placeholder.png"}
+          src={item.icon ? `/icons/${item.icon}` : "/icons/dummy.png"}
+          onError={(e) =>
+            ((e.target as HTMLImageElement).src = "/icons/dummy.png")
+          }
           alt={item.name}
           className="w-16 h-16 object-contain self-start mt-2"
         />
@@ -128,10 +134,26 @@ const ItemDetail = ({ item, items, onSelectItem }: Props) => {
                   </p>
                 );
               })}
-
-              {item.ability && (
-                <p className="text-blue-500 font-semibold">{item.ability}</p>
-              )}
+            </div>
+          )}
+          {/* Активные способности */}
+          {item.ability && (
+            <p className="mt-1 text-blue-600 font-semibold">✦ {item.ability}</p>
+          )}
+          {/* Ауры */}
+          {item.aura && (
+            <p className="mt-1 text-purple-600 font-semibold">
+              Аура: {item.aura}
+            </p>
+          )}
+          {/* Пассивные эффекты */}
+          {item.effects && item.effects.length > 0 && (
+            <div className="mt-1 space-y-1">
+              {item.effects.map((effect, idx) => (
+                <p key={idx} className="text-amber-600 font-semibold">
+                  ⚡ {effect}
+                </p>
+              ))}
             </div>
           )}
         </div>

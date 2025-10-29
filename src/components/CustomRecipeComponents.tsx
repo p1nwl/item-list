@@ -109,43 +109,43 @@ export const trophyUpgradeRecipes: string[][] = [
   ["cursed_unity", "soul_of_marquis_in_blood"],
 ];
 
-export const paragonScrollRecipes: string[][] = [
-  ["blood_crater", "evil_root", "bloodbath", "blood_injection"],
+export const paragonDrop: string[] = [
+  "Boss Ничтожество",
   // Уровень 2
-  ["set_6_activator"],
+  "Boss Кровожор Easy",
   // Уровень 3
-  ["demon_set_activator"],
+  "Boss Пагубный",
   // Уровень 4
-  ["blood_joy", "blood_gaze", "blood_beam", "blood_crystal"],
+  "Boss Кровожор Hard",
   // Уровень 5
-  ["tome_of_purification", "tome_of_spirituality", "tome_of_retribution"],
+  "Boss О-Кун",
   // Уровень 6
-  ["dark_grimoire"],
+  "Boss Костяшка",
   // Уровень 7
-  ["poison_vial", "bone_remains_axe"],
+  "Boss Результат Снадобья",
   // Уровень 8
-  ["broken_scythe", "bone_set_activator"],
+  "Boss Глава Новогоднего Корпоратива",
   // Уровень 9
-  ["vampire_soul"],
+  "Boss Жрица Сухожилий",
   // Уровень 10
-  ["bloody_robot", "shadow_vampire", "bloody_impudence", "bloody_fury"],
+  "Boss Разрушитель Природы Blood Raid",
   // Уровень 11
-  ["amethyst_pum", "turquoise_pum", "scarlet_pum"],
+  "Boss Матерь Пауков Blood Raid",
   // Уровень 12
-  ["soul_of_destroyer_in_blood"],
+  "Boss Ксерон Blood Raid",
   // Уровень 13
-  ["soul_of_spider_in_blood"],
+  "Boss Узуран Blood Raid",
   // Уровень 14
-  ["fusion"],
+  "Boss Испепелитель Hard",
   // Уровень 15
-  ["soul_of_xeron_in_blood"],
+  "Boss Кай Blood Raid",
   // Уровень 16
-  ["cursed_incinerator_soul"],
+  "Boss Маркиз Blood Raid",
   // Уровень 17
-  ["soul_of_uzuran_in_blood"],
+  "Boss Мольфар",
   // Уровень 18
-  ["soul_of_kai_in_blood"],
+  "Boss Vir-O-Slave",
   // Уровень 19
-  ["soul_of_marquis_in_blood"],
+  "Boss Негатив",
   // Уровень 20
 ];

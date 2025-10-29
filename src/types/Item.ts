@@ -21,7 +21,9 @@ export interface Item {
     value: number;
     percent?: boolean;
   }[];
+  aura?: string;
   ability?: string;
+  effects?: string[];
   attention?: string;
   additionalInfo?: string[];
   additionalInfoTitle?: string[];

@@ -73,7 +73,10 @@ const ItemList = () => {
                 onClick={() => navigate(`/item/${item.id}`)}
               >
                 <img
-                  src={item.icon || "/icons/placeholder.png"}
+                  src={item.icon ? `/icons/${item.icon}` : "/icons/dummy.png"}
+                  onError={(e) =>
+                    ((e.target as HTMLImageElement).src = "/icons/dummy.png")
+                  }
                   alt={item.name}
                   className="w-12 h-12 object-contain"
                 />
